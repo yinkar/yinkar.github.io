@@ -1,0 +1,3 @@
+class Wallpaper extends ImageClass {
+    
+}
