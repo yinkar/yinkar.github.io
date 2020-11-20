@@ -1,0 +1,22 @@
+{
+  "name": "yinkar-os",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yinkar/yinkar.github.io.git"
+  },
+  "keywords": [
+    "os"
+  ],
+  "author": "yinkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinkar/yinkar.github.io/issues"
+  },
+  "homepage": "https://github.com/yinkar/yinkar.github.io#readme"
+}

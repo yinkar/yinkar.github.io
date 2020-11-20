@@ -1,0 +1,3 @@
+class WindowButton extends Icon {
+
+}
