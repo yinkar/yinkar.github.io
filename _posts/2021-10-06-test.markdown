@@ -1,7 +1,0 @@
----
-layout: post
-title: "Test"
-date: 2021-10-06 02:25:00 +0300
-categories: blog
----
-Deneme

@@ -5,6 +5,7 @@ date: 2021-09-20 19:15:00 +0300
 categories: blog
 ---
 Bir şeyler deniyoruz bakalım.
+
 [Ana sayfa][ana-sayfa]
 
 [ana-sayfa]: https://yinkar.github.io
