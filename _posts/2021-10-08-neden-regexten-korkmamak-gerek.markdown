@@ -35,4 +35,5 @@ Sorgunun başındaki ve sonundaki / (slash) karakteri bizim eklediğimiz bir şe
 | \s    | Boşlukları seçer             |
 | \w    | Kelimeleri seçer             |
 | .     | Herhangi bir karakteri seçer |
+
 ...
