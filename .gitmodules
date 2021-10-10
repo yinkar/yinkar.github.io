@@ -4,6 +4,3 @@
 [submodule "toys/ucank"]
 	path = toys/ucank
 	url = git@github.com:yinkar/ucank
-[submodule "toys/bouncing-ball-on-js-console"]
-	path = toys/bouncing-ball-on-js-console
-	url = git@github.com:yinkar/bouncing-ball-on-js-console
