@@ -1,6 +1,0 @@
-[submodule "toys/seken-aksu"]
-	path = toys/seken-aksu
-	url = git@github.com:yinkar/seken-aksu
-[submodule "toys/ucank"]
-	path = toys/ucank
-	url = git@github.com:yinkar/ucank
