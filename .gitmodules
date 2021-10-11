@@ -7,3 +7,6 @@
 [submodule "toys/bouncing-ball-on-js-console"]
 	path = toys/bouncing-ball-on-js-console
 	url = https://github.com/yinkar/bouncing-ball-on-js-console.git
+[submodule "toys/web-sandbox"]
+	path = toys/web-sandbox
+	url = https://github.com/yinkar/web-sandbox.git
