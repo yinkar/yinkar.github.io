@@ -10,3 +10,9 @@
 [submodule "toys/web-sandbox"]
 	path = toys/web-sandbox
 	url = https://github.com/yinkar/web-sandbox.git
+[submodule "toys/yinkar-calc"]
+	path = toys/yinkar-calc
+	url = https://github.com/yinkar/yinkar-calc.git
+[submodule "toys/p2p-messenger"]
+	path = toys/p2p-messenger
+	url = https://github.com/yinkar/p2p-messenger.git
