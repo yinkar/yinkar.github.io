@@ -29,7 +29,7 @@ twitter_username: hsyn.krb
 github_username:  yinkar
 
 # Build settings
-theme: jekyll-theme-chirpy
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
