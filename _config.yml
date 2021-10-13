@@ -84,3 +84,6 @@ disqus:
 seo:
   name: Hüseyin Karabaş
   type: Person
+
+minima:
+  skin: dark
