@@ -29,9 +29,14 @@ twitter_username: hsyn.krb
 github_username:  yinkar
 
 # Build settings
-theme: jekyll-theme-hacker
+theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-sitemap
+  - jekyll-sass-converter
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -68,7 +73,6 @@ social:
   name: "Hüseyin Karabaş"
   email: hkarabas@yandex.com
   links:
-    - https://twitter.com/hsyn.krb
     - https://github.com/yinkar
     - https://dribbble.com/yinkar
 
@@ -76,7 +80,7 @@ theme_mode: dark
 
 disqus:
   shortname: yinkar
-
-sass:
-  sass_dir: _sass
   
+seo:
+  name: Hüseyin Karabaş
+  type: Person
