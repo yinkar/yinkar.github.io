@@ -29,7 +29,7 @@ twitter_username: hsyn.krb
 github_username:  yinkar
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
@@ -76,4 +76,7 @@ theme_mode: dark
 
 disqus:
   shortname: yinkar
+
+sass:
+  sass_dir: _sass
   
