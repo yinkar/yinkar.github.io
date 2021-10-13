@@ -73,3 +73,7 @@ social:
     - https://dribbble.com/yinkar
 
 theme_mode: dark
+
+disqus:
+  shortname: yinkar
+  
