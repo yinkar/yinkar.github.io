@@ -7,8 +7,8 @@ permalink: /hakkinda/
 Hüseyin Karabaş
 Yazılım Geliştirici / Bilgisayar Mühendisi
 
-- [Dribbble][dribbble]
 - [Github][github]
+- [Dribbble][dribbble]
 
-[dribbble]: https://dribbble.com/yinkar
 [github]: https://github.com/yinkar
+[dribbble]: https://dribbble.com/yinkar
