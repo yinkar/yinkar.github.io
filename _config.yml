@@ -28,6 +28,8 @@ url: "https://yinkar.github.io" # the base hostname & protocol for your site, e.
 twitter_username: hsyn.krb
 github_username:  yinkar
 
+google_analytics: G-60VY538DL5
+
 # Build settings
 theme: minima
 plugins:
