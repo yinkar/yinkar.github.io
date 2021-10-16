@@ -19,3 +19,6 @@
 [submodule "toys/game-of-life"]
 	path = toys/game-of-life
 	url = https://github.com/yinkar/game-of-life.git
+[submodule "toys/emoji-favicon"]
+	path = toys/emoji-favicon
+	url = https://github.com/yinkar/emoji-favicon.git

@@ -11,3 +11,4 @@ permalink: /toys/
 - [Yinkar Calc](/toys/yinkar-calc/)
 - [P2P Messenger](/toys/p2p-messenger/)
 - [Game of Life](/toys/game-of-life/)
+- [Emoji Favicon](/toys/emoji-favicon/)
