@@ -35,10 +35,13 @@ Sorgunun başındaki ve sonundaki / (slash) karakteri bizim eklediğimiz bir şe
 Şimdi kısaca temel Regex tanımlamalarının üzerinden geçelim. 
 
 
-| İfade | Anlamı                       |
-|-------|------------------------------|
-| \s    | Boşlukları seçer             |
-| \w    | Kelimeleri seçer             |
-| .     | Herhangi bir karakteri seçer |
+| İfade | Anlamı                                                    |
+|-------|-----------------------------------------------------------|
+| \s    | Boşlukları seçer                                          |
+| \w    | Kelimeleri seçer                                          |
+| .     | Herhangi bir karakteri seçer                              |
+| +     | Sağında bulunduğu karakterden bir veya daha fazla seçer   |
+| *     | Sağında bulunduğu karakterden sıfır veya daha fazla seçer |
+| ?     | Sağında bulunduğu karakterden sıfır veya bir tane seçer   |
 
 ...

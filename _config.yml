@@ -89,3 +89,6 @@ seo:
 
 minima:
   skin: dark
+
+pixelart-images: "/pixelart/images/"
+pixelart-thumbs: "/pixelart/thumbs/"
