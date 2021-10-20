@@ -389,18 +389,55 @@
                           element: starElement
                       });
                   }
+
+                  const starsInterval = setInterval(() => {
+                      for (e of starsArray) {
+                          e.element.style.opacity = Math.abs(
+                            Math.sin(
+                              parseFloat(
+                                +(new Date()) + 
+                                parseFloat(
+                                    e.properties.position.x * 
+                                    e.properties.position.y
+                                  )
+                                )
+                              ) * 1.5
+                            );
+                      }
+                  }, 50);
+
               }
 
           }
       };
 
-      Outside('.site-header', {
-          snow: true,
-          amount: 50,
-          dayNight: true,
-          moonSize: 20,
-          sunSize: 30
-      });
+      switch (window.location.hash) {
+        case '#snow':
+        Outside('.site-header', {
+            snow: true,
+            amount: 50,
+            bgColor: '#08264c',
+            forceBg: true
+          });
+        break;
+        case '#rain':
+          Outside('.site-header', {
+            rain: true,
+            amount: 50,
+            bgColor: '#2e3136',
+            forceBg: true
+          });
+        break;
+        default:
+          Outside('.site-header', {
+            amount: 50,
+            dayNight: true,
+            moonSize: 20,
+            sunSize: 30
+        });
+
+      }
+
 
 
     </script>
