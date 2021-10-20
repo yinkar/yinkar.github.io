@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+
+
+    <script>
+        const Outside = (el, config) => {
+          config = Object.assign({
+              live: false,
+              snow: false,
+              rain: false,
+              dayNight: false,
+              amount: 100,
+              bgColor: 'transparent',
+              forceBg: false,
+              starAmount: 20,
+              moonSize: 40,
+              sunSize: 60,
+              overflowHidden: false
+          }, config);
+
+
+          const random = (start, end) => {
+              return Math.floor(Math.random() * (end - start + 1)) + start;
+          }
+
+          const map = (x, a1, a2, b1, b2) => {
+              let normalized = (x - a1) / (a2 - a1);
+              return normalized * (b2 - b1) + b1;
+          }
+
+          const domEl = document.querySelector(el);
+
+          const date = new Date();
+
+          const setHour = () => date.getHours() + map(date.getMinutes(), 0, 60, 0, 1);
+          let hour = setHour();
+
+          const moment = {
+              DAY: 0,
+              NIGHT: 1
+          };
+
+          const dayColor = 'SteelBlue';
+          const nightColor = 'MidnightBlue'
+
+          if (domEl.style.backgroundColor || config.forceBg) {
+              domEl.style.backgroundColor = config.bgColor;
+          }
+
+          if (config.overflowHidden) {
+              domEl.style.overflow = 'hidden';
+          }
+
+          // Snow
+          if (config.snow) {
+              const snowArray = [];
+
+              const SnowParticle = function (radius, position, speed) {
+                  this.radius = radius;
+                  this.position = position;
+                  this.speed = speed;
+              }
+
+              const SnowElement = function (radius, position = {
+                  x: 0,
+                  y: 0
+              }, speed = {
+                  x: 0,
+                  y: 0
+              }) {
+                  const snowElement = document.createElement('div');
+
+                  Object.assign(snowElement.style, {
+                      backgroundColor: '#fff',
+                      width: radius + 'px',
+                      height: radius + 'px',
+                      position: 'absolute',
+                      left: position.x + 'px',
+                      top: position.y + 'px',
+                      borderRadius: '50%',
+                      pointerEvents: 'none',
+                      zIndex: '0'
+                  });
+
+                  return snowElement;
+              }
+
+              for (i = 0; i < config.amount; i++) {
+                  const snowParticle = new SnowParticle(random(1, 5), {
+                      x: random(1, domEl.offsetWidth),
+                      y: random(1, domEl.offsetHeight)
+                  }, {
+                      x: random(-5, 5),
+                      y: random(2, 5)
+                  });
+
+                  const snowElement = new SnowElement(snowParticle.radius, {
+                      x: snowParticle.position.x,
+                      y: snowParticle.position.y
+                  }, {
+                      x: 0,
+                      y: 0
+                  });
+
+                  domEl.prepend(snowElement);
+
+                  snowArray.push({
+                      properties: snowParticle,
+                      element: snowElement
+                  });
+              }
+
+
+              const snowInterval = setInterval(() => {
+                  for (e of snowArray) {
+                      e.element.style.left = `${(parseFloat(e.element.style.left) !== 0 ? parseFloat(e.element.style.left) : 5) +
+                          Math.sin(parseFloat(e.element.style.top) / 32) * e.properties.speed.x}px`;
+                      e.element.style.top = `${parseFloat(e.element.style.top) + e.properties.speed.y}px`;
+
+                      if (parseFloat(e.element.style.top) > domEl.offsetHeight - e.properties.radius) {
+                          e.element.style.top = '0px';
+                      }
+
+                      if (parseFloat(e.element.style.left) > domEl.offsetWidth - e.properties.radius) {
+                          e.element.style.left = '0px';
+                      }
+
+                      if (parseFloat(e.element.style.left) < 0 - e.properties.radius) {
+                          e.element.style.left = `${domEl.offsetWidth - e.properties.radius}px`;
+                      }
+                  }
+              }, 50);
+          }
+
+          // Rain
+          else if (config.rain) {
+              const rainArray = [];
+
+              const RainDrop = function (size, position, speed) {
+                  this.size = size;
+                  this.position = position;
+                  this.speed = speed;
+              };
+
+              const RainElement = function (size, position = {
+                  x: 0,
+                  y: 0
+              }, speed = {
+                  x: 0,
+                  y: 0
+              }, opacity = 0) {
+                  const rainElement = document.createElement('div');
+
+                  Object.assign(rainElement.style, {
+                      backgroundColor: 'CornflowerBlue',
+                      width: '1px',
+                      height: size + 'px',
+                      position: 'absolute',
+                      left: position.x + 'px',
+                      top: position.y + 'px',
+                      pointerEvents: 'none',
+                      zIndex: '0',
+                      transform: 'rotate(-7deg)',
+                      opacity: opacity
+                  });
+
+                  return rainElement;
+              };
+
+              for (i = 0; i < config.amount; i++) {
+                  const rainDrop = new RainDrop(random(8, 12), {
+                      x: random(1, domEl.offsetWidth),
+                      y: random(1, domEl.offsetHeight)
+                  }, {
+                      x: 2,
+                      y: random(6, 10)
+                  });
+
+                  const rainElement = new RainElement(rainDrop.size, {
+                      x: rainDrop.position.x,
+                      y: rainDrop.position.y
+                  }, {
+                      x: 0,
+                      y: 0
+                  }, Math.random());
+
+                  domEl.prepend(rainElement);
+
+                  rainArray.push({
+                      properties: rainDrop,
+                      element: rainElement
+                  });
+              }
+
+
+              const rainInterval = setInterval(() => {
+                  for (e of rainArray) {
+                      e.element.style.left = `${parseFloat(e.element.style.left) + e.properties.speed.x}px`;
+                      e.element.style.top = `${parseFloat(e.element.style.top) + e.properties.speed.y}px`;
+
+                      if (parseFloat(e.element.style.top) > domEl.offsetHeight - e.properties.size) {
+                          e.element.style.top = '0px';
+                      }
+
+                      if (parseFloat(e.element.style.left) > domEl.offsetWidth - e.properties.size) {
+                          e.element.style.left = '0px';
+                      }
+
+                      if (parseFloat(e.element.style.left) < 0 - e.properties.size) {
+                          e.element.style.left = `${domEl.offsetWidth}px`;
+                      }
+                  }
+              }, 50);
+          }
+
+          // Day Night cycle
+          if (config.dayNight) {
+              let currentMoment = (hour > 6 && hour < 18) ? moment.DAY : moment.NIGHT;
+
+              let bgColor = currentMoment === moment.DAY ? dayColor : nightColor;
+
+              domEl.style.backgroundColor = bgColor;
+
+              const setCelestialPosition = (hour, size) => {
+                  return {
+                      x: map((hour + 12 + 6) % 12, 0, 12, 0, domEl.offsetWidth - size),
+                      y: Math.sin(map((hour + 12 + 6) % 12, 0, 12, -Math.PI, 0)) * (parseFloat(domEl.offsetHeight) / 2) + parseFloat(domEl.offsetHeight) / 2
+                  };
+              };
+
+              // Day
+              if (currentMoment === moment.DAY) {
+                  // Sun
+                  const Sun = function (size, position) {
+                      this.size = size;
+                      this.position = position;
+                  };
+
+                  let sunPosition = setCelestialPosition(hour, config.sunSize);
+
+                  const SunElement = function (size, position = sunPosition) {
+                      const sunElement = document.createElement('div');
+
+                      Object.assign(sunElement.style, {
+                          backgroundColor: 'Gold',
+                          width: size + 'px',
+                          height: size + 'px',
+                          position: 'absolute',
+                          left: position.x + 'px',
+                          top: position.y + 'px',
+                          pointerEvents: 'none',
+                          zIndex: '0',
+                          borderRadius: '50%',
+                      });
+
+                      return sunElement;
+                  }
+
+                  const sun = new Sun(config.sunSize, sunPosition);
+
+                  const sunElement = new SunElement(sun.size, {
+                      x: sun.position.x,
+                      y: sun.position.y
+                  });
+
+                  domEl.prepend(sunElement);
+
+                  let sunInterval = setInterval(function () {
+                      hour = setHour();
+                      let position = setCelestialPosition(hour, config.sunSize);
+
+                      sunElement.style.left = `${position.x}px`;
+                      sunElement.style.top = `${position.y}px`;
+
+                  }, 2000);
+
+              }
+
+              // Night
+              else if (currentMoment === moment.NIGHT) {
+                  // Moon
+                  const Moon = function (size, position) {
+                      this.size = size;
+                      this.position = position;
+                  };
+
+                  let moonPosition = setCelestialPosition(hour, config.moonSize);
+
+                  const MoonElement = function (size, position = moonPosition) {
+                      const moonElement = document.createElement('div');
+
+                      Object.assign(moonElement.style, {
+                          width: size + 'px',
+                          height: size + 'px',
+                          position: 'absolute',
+                          left: position.x + 'px',
+                          top: position.y + 'px',
+                          pointerEvents: 'none',
+                          zIndex: '0',
+                          borderRadius: '50%',
+                          boxShadow: `-${size / 6}px ${size / 6}px 0 0 Yellow`
+                      });
+
+                      return moonElement;
+                  }
+
+                  const moon = new Moon(config.moonSize, moonPosition);
+
+                  const moonElement = new MoonElement(moon.size, {
+                      x: moon.position.x,
+                      y: moon.position.y
+                  });
+
+                  domEl.prepend(moonElement);
+
+                  let moonInterval = setInterval(function () {
+                      hour = setHour();
+                      let position = setCelestialPosition(hour, config.moonSize);
+
+                      moonElement.style.left = `${position.x}px`;
+                      moonElement.style.top = `${position.y}px`;
+
+                  }, 2000);
+
+                  // Stars
+                  const starsArray = [];
+
+                  const Star = function (size, position) {
+                      this.size = size;
+                      this.position = position;
+                  };
+
+                  const StarElement = function (size, position = {
+                      x: 0,
+                      y: 0
+                  }, opacity = 0) {
+                      const starElement = document.createElement('div');
+
+                      Object.assign(starElement.style, {
+                          backgroundColor: 'Yellow',
+                          width: size + 'px',
+                          height: size + 'px',
+                          position: 'absolute',
+                          left: position.x + 'px',
+                          top: position.y + 'px',
+                          pointerEvents: 'none',
+                          zIndex: '0',
+                          transform: 'rotate(45deg)',
+                          opacity: opacity
+                      });
+
+                      return starElement;
+                  }
+
+                  for (i = 0; i < config.starAmount; i++) {
+                      const star = new Star(random(1, 2), {
+                          x: random(1, domEl.offsetWidth),
+                          y: random(1, domEl.offsetHeight - 20)
+                      });
+
+                      const starElement = new StarElement(star.size, {
+                          x: star.position.x,
+                          y: star.position.y
+                      }, Math.max(Math.random(), 0.7));
+
+                      domEl.prepend(starElement);
+
+                      starsArray.push({
+                          properties: star,
+                          element: starElement
+                      });
+                  }
+              }
+
+          }
+      };
+
+      Outside('.site-header', {
+          snow: true,
+          amount: 50,
+          dayNight: true,
+          moonSize: 20,
+          sunSize: 30
+      });
+    </script>
+  </body>
+
+</html>
