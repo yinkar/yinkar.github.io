@@ -1,24 +1,21 @@
 /*! div style */
 .image-gallery {
     width: 100%;
-    display: grid;
-    grid-template-columns: 240px 240px 240px;
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 4px;
     gap: 10px;
 }
 
 .box {
-    flex-basis: 25%;
-    width: 100%;
     margin: 2px;
 }
 
 .img-gallery {
-    width: 100%;
+    width: 200px;
     height: 200px;
     object-fit: cover;
-    transform: scale(1);
     transition: all 0.3s ease-in-out;
 }
 
