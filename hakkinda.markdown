@@ -4,7 +4,8 @@ title: Hakkında
 permalink: /hakkinda/
 ---
 
-Hüseyin Karabaş
+## Hüseyin Karabaş
+
 Yazılım Geliştirici / Bilgisayar Mühendisi
 
 - [Github][github]
