@@ -411,8 +411,8 @@
           }
       };
 
-      switch (window.location.pathname.split('/').slice(-1).pop()) {
-        case 'snow':
+      switch (window.location.search) {
+        case '?snow':
         Outside('.site-header', {
             snow: true,
             amount: 50,
@@ -420,7 +420,7 @@
             forceBg: true
           });
         break;
-        case 'rain':
+        case '?rain':
           Outside('.site-header', {
             rain: true,
             amount: 50,

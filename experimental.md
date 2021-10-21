@@ -6,6 +6,6 @@ custom_css: experimental.css
 
 [Day/Night](/experimental/)
 
-[Snow](/experimental/snow)
+[Snow](/experimental/?snow)
 
-[Rain](/experimental/rain)
+[Rain](/experimental/?rain)
