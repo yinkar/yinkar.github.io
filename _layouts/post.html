@@ -18,12 +18,15 @@ comments: true
 
   <div class="post-content e-content" itemprop="articleBody">
     {%- if page.featured-image -%}
+    <p>
       <img src="{{ page.featured-image }}" alt="{%- if page.featured-image-alt -%}
       {{ page.featured-image-alt }}
       {%- else -%}
       {{ page.title }}
       {%- endif -%}">
+    </p>
     {%- endif -%}
+
     {{ content }}
   </div>
 

@@ -1,11 +1,28 @@
 ---
 layout: post
-title: "İlk yazı"
+title: "İlk Yazı"
 date: 2021-09-20 19:15:00 +0300
 categories: blog
 ---
-Bir şeyler deniyoruz bakalım.
 
-[Ana sayfa][ana-sayfa]
+Bu web sitesini [Jekyll](https://jekyllrb.com) isminde, Ruby ile kodlanmış bir static page generator ile oluşturdum. Blog yazılarını da markdown formatında yazıyorum ve Git kullanarak siteyi güncel tutuyorum. Web sitesini barındırdığım Github Pages, doğrudan Jekyll desteği sunuyor, bu güzel bir olay. Burası built-in bir şekilde syntax highlight özelliğini de destekliyormuş, dur bir deneyelim:
 
-[ana-sayfa]: https://yinkar.github.io
+{% highlight python %}
+str = "Açmayın dedeler"
+print(str.replace("d", "m"))
+{% endhighlight %}
+
+Hoş.
+
+Jekyll kimi konularda sorun çıkarabiliyor tabii, örneğin tema olayına bakış açısını çok da beğenmedim. Standart bir kullanımı yok, birden fazla yolu var ve bu yollar genellikle çok temiz olmuyor. Kendim bir tema oluşturmayı düşünüyorum.
+
+[Toys](/toys/) sayfasında hobi olarak kodladığım, kodlarken eğlendiğim ve zevkle kodladığım ufak tefek uygulamalar ve oyunlar bulunuyor. Büyük altyapı gereksinimi duymayan, çalışması için yalnızca bir tarayıcı yeterli olan uygulamalar kodladığımda genelde oraya ekliyorum. Daha öncesinde kodladığım bunlar gibi daha çok örnek var fakat içlerinde ayıklama yaparak buraya eklemeyi daha uygun buldum.
+
+Daha önce kodladığım GLSL örneklerini [GLSL](/glsl/) sayfasına ekledim, altına da [ShaderToy](https://shadertoy.com)'a eklediğim hallerinin linklerini koydum. İleride oradaki örnekleri geliştirip, daha uygun hale getirerek, daha fazla örnek kodlamayı düşünüyorum. GLSL'in ne olduğu, nasıl başlanacağı ile ilgili yazılar da gelecek.
+
+Pixel Art çizimlerimi de [Pixel Art](/pixelart/) sayfasına ekledim. Şimdiye kadar eklediklerimin hepsini telefonda basit bir uygulamada çizmiştim. Genellikle uyuyamadığım geceler, metroda seyahat ettiğim zamanlar veya bir şeyi beklerken geçen zamanlarda çizmişim. Kullandığım uygulamanın ismi 8bit Painter ve gerçekten basit bir uygulama, her piksel için ayrı ayrı uğraşmam gerekiyor, kolaylık sağlayan bir aracı yok. Fakat telefonda bunu yapabildiğim için benim için pratik oluyor. Kendim bir piksel art uygulaması yazma çalışmalarına başlamıştım, hem mobilde hem web üzerinde çalışacak bir web uygulaması şeklinde.
+
+[Hakkında](/hakkinda/) sayfasını ileride detaylı bir şekilde geliştirmeyi düşünüyorum.
+
+Ha bir de [Experimental](/experimental/) isminde gizli bir sayfa var. Kendi geliştirdiğim bir Javascript kütüphanesini burada denedim.
+
