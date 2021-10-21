@@ -148,7 +148,13 @@ Ancak bu koşula uyup, baş harfi büyük olanları da seçmek istiyoruz diyelim
 \b[E-Ee-e][a-z]+n\b
 ```
 
-gibi mutant bir çözümde bulunabiliriz, ama yapmayalım onu. Çok da çirkin duruyor. Şimdi burada yeni bir operatöre değinelim.
+gibi mutant bir çözümde bulunabiliriz, ama yapmayalım onu. Çok da çirkin duruyor. Aslında köşeli parantezlerin içine istediğimiz harfleri tek tek yazmamız da mümkün. Örneğin şu şekilde bir ifade yazabiliriz:
+
+```
+[Ee]
+```
+
+Belki bunu öğrendikten sonra bu blog yazısının kapak resmindeki Regex ifadesinin hangi metinleri seçebileceğini anlamışsınızdır. Şimdi köşeli parantez değil de farklı bir yöntem kullanalım bunun için. Yeni bir operatöre değinelim.
 
 "\|" operatörü programlama dillerindeki "veya" operatörü gibi davranır. İki koşuldan hangisi uygunsa onu seçer. Ancak bunu kullanabilmek için sorgumuzu parantez içine almamız, yani gruplandırmamız gerekecek. Kısaca sadece bu kısma değinirsek şu şekilde olacak:
 
@@ -176,5 +182,5 @@ Bir kullanımdan daha bahsedelim. Eğer sonsuz değil de belirli sayıda karakte
 [a-z]{2, 4}
 ```
 
-gibi bir kullanım yeterli olacaktır. Sanırım bu yazı için bu kadarlık yeter. Zaten yarısını başladıktan birkaç hafta sonra yazdım. Bu yazıyı bir serinin ilk yazısı olarak düşünüyorum ve bir sonraki Regex yazısında da metnin başı, metnin sonu, hariç tutma, gruplama gibi kısımlara değinirim muhtemelen. Genelde ilk olarak bunlar anlatılır fakat ben böyle bir yol çizmeyi tercih ettim. Geleceğe selamlar, hadi ben gidiyorum.
+gibi bir kullanım yeterli olacaktır. Sanırım bu yazı için bu kadarlık yeter. Zaten yarısını başladıktan birkaç hafta sonra yazdım. Bu yazıyı bir serinin ilk yazısı olarak düşünüyorum ve bir sonraki Regex yazısında da metnin başı, metnin sonu, köşeli parantez içinde özel karakterlerin kullanımı, hariç tutma, gruplama gibi kısımlara değinirim muhtemelen. Genelde ilk olarak bunlar anlatılır fakat ben böyle bir yol çizmeyi tercih ettim. Geleceğe selamlar, hadi ben gidiyorum.
 
