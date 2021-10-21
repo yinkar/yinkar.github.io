@@ -12,3 +12,4 @@ permalink: /toys/
 - [P2P Messenger](/toys/p2p-messenger/)
 - [Game of Life](/toys/game-of-life/)
 - [Emoji Favicon](/toys/emoji-favicon/)
+- [Word Counter](/toys/word-counter/)
