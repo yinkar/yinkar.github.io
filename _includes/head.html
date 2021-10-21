@@ -27,8 +27,10 @@
   
   {% if page.featured-image %}
   <meta content="{{ site.url }}{{ page.featured-image }}" property="og:image" />
+  <meta content="{{ site.url }}{{ page.featured-image }}" property="twitter:image" />
   {% else %}
-  <meta content="{{ site.url }}/images/avatar.jpg" property="og:image" />
+  <meta content="{{ site.url }}/pixelart/images/05-bebek-yoda.png" property="og:image" />
+  <meta content="{{ site.url }}/pixelart/images/05-bebek-yoda.png" property="twitter:image" />
   {% endif %}
 
 </head>
