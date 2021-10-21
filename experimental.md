@@ -4,7 +4,7 @@ permalink: /experimental/
 custom_css: experimental.css
 ---
 
-[Day/Night](/experimental)
+[Day/Night](/experimental/)
 
 [Snow](/experimental/snow)
 
