@@ -25,3 +25,6 @@
 [submodule "toys/word-counter"]
 	path = toys/word-counter
 	url = https://github.com/yinkar/word-counter.git
+[submodule "toys/ansi-art-painter"]
+	path = toys/ansi-art-painter
+	url = https://github.com/yinkar/ansi-art-painter.git

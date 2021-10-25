@@ -13,3 +13,4 @@ permalink: /toys/
 - [Game of Life](/toys/game-of-life/)
 - [Emoji Favicon](/toys/emoji-favicon/)
 - [Word Counter](/toys/word-counter/)
+- [ANSI Art Painter](/toys/ansi-art-painter/)
