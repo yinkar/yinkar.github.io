@@ -2,12 +2,11 @@
 layout: post
 title: "Neden Regex'ten Korkmamak Gerek"
 date: 2021-10-08 01:58:00 +0300
-categories: blog
 author: Hüseyin Karabaş
 description: Regex'e nazikçe giriş
 featured-image: /images/blog/regex/regex-cover.png
 featured-image-alt: Regex'ten Korkma
-categories: programlama regex
+categories: blog programlama regex
 ---
 Çoğu yazılımcı genellikle Regex ismini duyduğu anda kaçacak delik arıyor. Tabii bunu anlamak kolay. Regex'i tanımlamak adına çok güzel bir ifade duymuştum: write-only language. Tıpkı yıllar önce, çocukluk yıllarında HTML ile web sayfaları oluşturmaya çalışırken Javascript kodlarının bize büyü gibi gelmesi gibi bir hissiyat yaratıyor Regex. Javascript kodlarını sayfamıza eklerdik ve o anlamsız görünen semboller, ifadeler sayfa kodlarına yapıştırıldığı anda havai fişekler patlardı, rengarenk yazılar sayfada dans ederdi, tarayıcı ekranı deprem efektiyle sallanırdı... Tek yapabildiğimiz ise bu işlevsel kodları kullanabilmek için bir yerlerden kopyalayıp yapıştırmaktı. Çünkü o dünya içine dalmak için çok komplike görünüyordu.
 
