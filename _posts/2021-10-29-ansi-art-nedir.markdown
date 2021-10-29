@@ -47,7 +47,7 @@ Tekrar benim kodladığım örneğe dönelim. git.io, Github'a ait olan bir URL 
 
 Bu metin aslında doğrudan terminalimize gelen içerik. Terminal bu kodlamaları yorumluyor ve onları renkler gibi çeşitli görselleştirmelere dönüştürüyor. ANSI art dediğimiz şeyin arkasında da da bu var. Ona geçmeden önce bu içeriğin nerede tutulduğuna bakalım. Adresten anlayabileceğiniz üzere bu sayfa aslında doğrudan benim yazının başında da verdiğim, Github Gist üzerinde yer alan kaynak kodunun yalın olarak görüntülendiği sayfadan başka bir şey değil. Esinlendiğim kişinin kullanıcı adına da böyle ulaşmıştım.
 
-Yalnız şu an fark ediyorum, Visual Studio Code üzerinde bu kodlamaları yaparken kullandığım eklentinin önizleme özelliği varmış. Ben yalnızca metin üzerinden renkleri görerek, önizleme için ise basit bir Bash betiği yazmıştım.
+Yalnız şu an fark ediyorum, Visual Studio Code üzerinde bu kodlamaları yaparken kullandığım eklentinin önizleme özelliği varmış. Ben yalnızca metin üzerinden renkleri görerek kodlamış, önizleme için ise basit bir Bash betiği yazmıştım.
 
 ![VSCode ANSI art](/images/blog/ansi-art/ansi-art-6.png)
 
