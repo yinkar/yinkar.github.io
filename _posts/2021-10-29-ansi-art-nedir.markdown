@@ -204,5 +204,5 @@ Komutu ekrana bastırdığınızda ekrandaki önceki karakterlerin silinmesi iç
 
 Basitçe açıklamak gerekirse olarak ``\033[H`` ifadesi imleci ekranın sol üst köşesine getiriyor, ``\033[J`` ifadesi ise imleçten ekranın sonuna kadar olan kısmı siliyor. Bu H ve J karakterlerine CSI (Control Sequence Introducer) karakterleri, öncesinde gösterdiğim stillendirme ifadelerine de SGR (Select Graphic Renddition) parametreleri deniyor.
 
-Yazı uzayıp gitmiş. Umarım şunu yazının geri kalanında açıklayacağım deyip de unuttuğum bir kısım olmamıştır. Şu an yazıyı baştan sona okumaya üşeniyorum, sonra bakarım. Geleceğe selamlar, hadi ben gidiyorum.
+Yazı uzayıp gitmiş. Umarım şunu yazının geri kalanında açıklayacağım deyip de unuttuğum bir kısım olmamıştır. Şu an yazıyı baştan sona okumaya üşeniyorum, sonra bakarım. Belki sonraki yazacağım yazılardan birinde 256 renk kullanımına ve daha detaylı kullanımlara girerim. Geleceğe selamlar, hadi ben gidiyorum.
 
