@@ -184,7 +184,7 @@ echo -e "\033[035mBu bir\033[0m Bu iki"
 |   \033[5m       |Yanıp sönen        |
 |   \033[6m       |Hızlı yanıp sönen  |
 |   \033[7m       |Arkaplan           |
-|   \033[7m       |Görünmez           |
+|   \033[8m       |Görünmez           |
 
 Bunlardan benim en ilgimi çeken yanıp sönme kodu oldu. Arkaplan ile beraber kullanalım:
 
