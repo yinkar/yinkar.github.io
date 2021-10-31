@@ -1,0 +1,443 @@
+---
+layout: post
+title: "p5.js'e Giriş"
+date: 2021-10-31 10:00:00 +0300
+author: Hüseyin Karabaş
+description: Bir görsel prototipleme kütüphanesi olan p5.js'e giriş dersi
+featured-image: /images/blog/p5js/p5js-cover.png
+featured-image-alt: p5.js logo
+categories: programlama js p5js sanat
+---
+
+p5.js, Processing isimli projenin JavaScript'e uyarlanmış bir versiyonudur. Processing'den biraz bahsetmek gerekirse, çok rahat bir şekilde oyun, elektronik sanat gibi çeşitli görsel uygulamalar tasarlamak için kullanılan bir grafik kütüphanesi ve aynı zamanda IDE (tümleşik geliştirme ortamı)'dir. Processing'in birçok dile birçok uyarlaması vardır. Bu uyarlamalardan p5.js'in kullanımı çok rahattır ve desteği de oldukça iyidir. Hoş da bir dökümantasyona sahip. Processing'de yazılan programlar kolayca p5.js'e uyarlanabilir.
+
+p5.js kullanırken JavaScript yazmaya devam edebilirsiniz. Standart Canvas API yerine p5.js'i kullandığınızda oldukça hızlı işler ortaya çıkarabildiğinizi göreceksiniz. Yalnızca 2 boyutlu değil, 3 boyutlu işler de çıkarmanız mümkün. Benim de birkaç denemem olmuştu, bunlardan birini [bu](/toys/ucank) adres üzerinden görebilirsiniz. Belki onu da detaylıca inceleriz.
+
+Bir oyun kütüphanesi kadar yüklü olmayıp, saf JavaScript kadar da temel işlemler için bize bağlı olmayan bir kütüphane olması oyun prototipleri geliştirebilmemiz için p5.js'i ideal kılıyor. Bu kütüphaneyi kullanarak birçok ıvır zıvır kodladım, [bu](/toys/seken-aksu), [bu](/toys/game-of-life) ve [bu](/toys/ansi-art-painter) birkaç örnek. Yayınlamadığımda onlarca ufak tefek iş var.
+
+Bu kütüphaneyi CDN üzerinden sayfanıza dahil ederek kullanabilirsiniz: 
+
+{% highlight html %}
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+{% endhighlight %}
+
+Canvas elementini p5.js'in kendi içerisinde oluşturuyorsunuz, bu yüzden HTML sayfasında canvas elementine ihtiyacınız yok. Bir JavaScript dosyası oluşturarak kodlamaya başlayabilirsiniz.
+
+Ancak biz burada p5.js için web üzerinden sunulmuş olan bir geliştirme ortamı olan [p5.js Web Editor](https://editor.p5js.org/)'ü kullanacağız. Sayfayı açın ve incelemeye başlayalım. Bir üyelik oluşturursanız iyi olur, fakat bir şeyler kodlayıp kaydetmek için üyelik zorunlu değil. 
+
+![p5.js Web Editor arayüzü](/images/blog/p5js/p5js-1.png)
+
+Şimdi burada bazı bahsedeceğim kısımları işaretledim. Bende karanlık mod seçili. Bunu sağ üstteki ``1`` olarak işaretlediğim çark sembolüyle ayarlar penceresini açarak ayarlayabilirsiniz. 
+
+``2`` ile işaretlediğim butona tıkladığınızda, bu editörün aslında basitçe ``index.html``, ``style.css`` ve ``sketch.js`` ismindeki üç dosyadan ibaret bir proje üzerinde çalıştığını göreceksiniz. Biz burada yalnızca önümüzde açık olan ``sketch.js``'i kullanarak p5.js ile oldukça sade bir şekilde kodlama yapabiliyoruz. Başlangıç için basit projelerde bu yeterli. İleride farklı objeleri farklı JS dosyalarında tutmak isteyebilirsiniz, resim gibi dosyalar eklemek isteyebilirsiniz. Bunun için açtığınız bu kenar çubuğunda dosya yükleme ve oluşturma seçenekleri mevcut.
+
+``3`` ile işaretlediğim kısım anlayacağınız üzere projeyi başlatıp durdurmaya yarıyor. "Auto-refresh" seçeneğini yazdığınız an çalışmaya başlayacak ve butonlara tıklamanız gerekmeyecek. Ben hiç kullanma gereği duymadım. Bu kısmın hemen yanında dosya ismi belirlenen kısım mevcut, açtığınızda rastgele bir isim belirleniyor. Şimdilik bir önemi olmadığı için işaretlemedim.
+
+``4`` ile işaretlediğim kısım da görüldüğü gibi kodları yazacağımız kısım. Açar açmaz en temel haliyle p5.js'in kullanımını görüyorsunuz. Odağımız bu kısımda olacak. Kenar çubuğundan başka bir dosyayı seçtiğinizde onun içeri de burada yer alacak.
+
+``5 `` ile işaretli kısım ise projenin önizlemesinin yer aldığı kısım. Eğer yukarıda yer alan play butonuna tıklarsanız burada gri bir kare çizildiğini göreceksiniz.
+
+Bu arada sol altta da konsolu görüyorsunuzdur. Hata ayıklama yaptığımızda bastığımız değerler orada görünecek. Kendisinin developer tools'un konsolundan bir farkı yok.
+
+Kodu incelemeye başlayalım. p5.js'i oyun kodlamak için kullanmayı öğretmeyi amaçladığımdan burada projeden "oyun" adıyla bahsedeceğim. ``setup()`` fonksiyonu oyun başladığı an bir kere çalışır ve ilk işlemleri yapmaya yarar. ``draw()`` fonksiyonu ise sürekli olarak çalışır. Amacı ekrana çizim yapmak olduğu için mevcut FPS değeri kadar sıklıkla çalışması gerekir. Oyundaki güncellemeleri de bu kısımda yapabiliriz. İleride belki ``update()`` adından bir fonksiyon ile hesaplamaları yaparak ``draw()`` fonksiyonunu yalnızca çizim yapması için rahat bırakabiliriz. Ben sürekli hızlıca prototip geliştirdiğimden işlemleri de ``draw()`` fonksiyonunda yapıyorum, fakat ciddi bir proje oluşturacağım zaman bu ayrımı yapmak daha iyi olur.
+
+``setup()`` fonksiyonunun içinde görüldüğü üzere ``createCanvas()`` fonksiyonu çağırıyor. Bu, bahsettiğim gibi bir canvas oluşturmaya yarıyor. Şimdi bu fonksiyonun parametrelerini 640, 480 gibi istediğiniz bir değerle değiştirin.
+
+``draw()`` fonksiyonunun içinde de ``background()`` isminde bir fonksiyon çağırılmış. Bu ise tüm canvas'ın arkaplan rengini belirlemeyi sağlıyor. Canvas API'dan yola çıkarsak, bunu tüm canvas'ı kaplayan bir dikdörtgeni boyamak gibi düşünebilirsiniz. Aldığı parametre ise 0 ile 255 arasında yer alıyor ve 0 siyahı, 255 ise beyazı temsil ediyor. Buna örneğin 75 gibi bir değer verelim.
+
+Şimdi play tuşuna bastığınızda şöyle bir sonuç göreceksiniz:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-2.png)
+
+Şimdi ekrana bir daire çizelim. Bunun için draw() fonksiyonunun içinde circle() fonksiyonunu çağıracağız. Kendisi şöyle parametreler alıyor
+
+```
+circle(x, y, yarıçap)
+```
+
+Bu tür görsel programlama uygulamalarında ekranın sol üst kısmı 0, 0 noktasıdır. Sola doğru x değeri artar, aşağı doğru y değeri artar. Bunu kendiniz örneğin terminal üzerinde çalışan görsel bir uygulama kodladığınızda daha iyi anlarsınız.
+
+Şimdi, 50'ye 100 noktasında 75 birim yarıçapa sahip bir daire oluşturalım. draw() fonksiyonuna şunu yazın:
+
+{% highlight javascript %}
+circle(50, 100, 75);
+{% endhighlight %}
+
+Çıktımız şu olacak:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-3.png)
+
+Hadi bu arkadaşı boyayalım. Canvas'ı daima gerçek hayattaki bir tuval gibi düşünün, bunu bir şekli döndürmeyi anlattığımda daha güzel bir örnekle açıklayacağım. Canvas dediğimiz yapı üzerinde obje kavramı yoktur, yalnızca üst üste çizilen şekiller vardır ve o şekle sonradan ulaşmamız da mümkün değildir. Bu yüzden biz obje oluşturup, o objenin değerlerine göre şekiller çizeriz. Bunu anlatmamın nedeni ise boyamayla ilgili. Ekranda bir şeklin içini doldurabilir ve kenar çizgisini renklendirebiliriz. Bunu yapmak için önce gerçek hayattaki bir durumu gözünüzde canlandırın; fırçamızı bir renge batırıyoruz ve boyuyoruz. Fırçamızı başka bir renge batırana kadar fırçamız o renkte kalıyor.
+
+Nesnenin içini doldurmak için ``fill()``, dış çizgisini boyamak için ``stroke()`` fonksiyonlarını kullanıyoruz. Bu fonksiyonların parametreleri ``background()`` fonksiyonuyla aynı. İçi şeffaf olsun istiyorsak parametresiz bir şekilde ``noFill()`` fonksiyonunu, dış çizgisiz olsun istiyorsak yine aynı şekilde ``noStroke()`` fonksiyonlarını çağırıyoruz.
+
+Şimdi circle() fonksiyonundan önce fill() ve stroke() fonksiyonlarını örneğin şu şekilde çağırın:
+
+{% highlight javascript %}
+fill(50);
+stroke(200);
+circle(50, 100, 75);
+{% endhighlight %}
+
+Çıktı şöyle olacak.
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-4.png)
+
+Şimdiye kadar background(), fill() ve stroke() fonksiyonlarında yalnızca siyah ve beyaz arasında, yani grayscale renkler kullandık. Eğer tek parametre alıyorlarsa bu şekilde, üç tane parametre vererek RGB (red, green, blue) renkler kullanabiliriz. Daha sonradan çok daha fazla renk seçeneği kullanmamızı sağlayan ``color()`` fonksiyonundan bahsederiz.
+
+fill() ve stroke() fonksiyonunun parametrelerini şunun gibi istediğiniz üç değerle değiştirin:
+
+{% highlight javascript %}
+fill(100, 10, 10);
+stroke(255, 20, 20);
+{% endhighlight %}
+
+Çıktı da şu şekilde:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-5.png)
+
+Şimdi bazı değerleri değişken üzerinden kontrol ederek biraz hareket katalım. Tüm kodların en başında ``daireX`` adından bir değişken oluşturalım ve ``50`` değeri verelim. draw() fonksiyonu içerisinde de en altta bu değeri ``daireX++`` diyerek birer birer arttıralım. Hatırlayacağınız gibi draw() fonksiyonu her karede sürekli çalışan bir fonksiyon. Son olarak da dairenin x parametresi olarak ``daireX`` değişkenini gönderelim. Kodların son hali şu olacak:
+
+{% highlight javascript %}
+let daireX = 50;
+
+function setup() {
+  createCanvas(640, 480);
+}
+
+function draw() {
+  background(75);
+
+  fill(100, 10, 10);
+  stroke(255, 20, 20);
+  
+  circle(daireX, 100, 75);
+  
+  daireX++;
+}
+{% endhighlight %}
+
+Bunun da çıktısı şu olacak, bu resme özel hareketli olsun:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-6.gif)
+
+Şimdi draw fonksiyonunun başındaki ``background(75)`` ifadesini silerek bir şey deneyelim. Şöyle bir şey olacak:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-7.png)
+
+Başlarda bahsettiğim bir konu vardı, canvas gerçek bir tuval gibidir. İsterseniz bir resim defterinin, eskiz defterinin sayfaları olarak da düşünebilirsiniz. Bir çizimi yaptıktan sonra başka bir sayfaya geçmeden, buradaki durumda ise o resmin üstünü kaplamadan başka bir şey çizerseniz o çizimin üstüne çizilir. Bu yüzden draw() fonksiyonunun başında bir arkaplan rengi belirliyoruz, yani o renkte bir dikdörtgenle canvas'ı kaplıyoruz ki yeni bir çizimi temiz bir şekilde çizebilelim. Bu tür, üst üste çizme yapısı örneğin bir çizim uygulaması kodladığımızda çok işimize yarıyor.
+
+p5.js'in tanımladığı bazı değişkenler var. Şimdi bunlardan ``mouseX`` ve ``mouseY`` değişkenlerini göreceğiz. Ayrıca dikdörtgen çizmeye de değinelim. Ekrana dikdörtgen çizmek için ``rect()`` fonksiyonunu kullanırız. Bunun da aldığı parametreler şu şekilde.
+
+```
+rect(x, y, genişlik, [yükseklik])
+```
+
+Yükseklik parametresini köşeli parantez içine almamın nedenini çeşitli dökümantasyonları okuyorsanız anlamışsınızdır. Bu, isteğe bağlı bir parametre. Yüksekliği vermeden, yalnızca genişlik verdiğinizde genişlik ölçeğinde bir kare elde edeceksiniz.
+
+Şimdi ben istiyorum ki, çizeceğimiz dikdörtgen mouse'u takip etsin. Şu şekilde mouse'un koordinatlarında çizilen, 100 birim genişliğe ve 50 birim yüksekliğe sahip bir dikdörtgen çizebilirsiniz:
+
+{% highlight javascript %}
+rect(mouseX, mouseY, 100, 50);
+{% endhighlight %}
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-8.png)
+
+Şimdi sildiğimiz ``background()`` fonksiyonunu tekrar ekleyelim de adama benzesin. Onun da ekran görüntüsünü eklemeyeyim artık.
+
+Döndürme konusu biraz karışıktır. Şu kodların teker teker üstünden geçerek açıklayalım:
+
+{% highlight javascript %}
+function setup() {
+  createCanvas(640, 480);
+}
+
+function draw() {
+  background(225);
+  
+  push();
+  
+  translate(200, 150);
+  rotate(degrees(45));
+  
+  fill(120);
+  rect(0, 0, 100);
+  
+  pop();
+  
+  
+  fill(50);
+  rect(400, 200, 90);
+}
+{% endhighlight %}
+
+Çıktısı şu şekilde:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-9.png)
+
+Bir kağıt üzerine kare çizdiğinizi düşünün. Fakat kareyi 45 derece döndürülmüş bir şekilde çizeceksiniz. Bunu yapmanın en iyi yolu kağıdı çevirmektir, bilirsiniz. Kağıdı 45 derece çevirirsiniz, kareyi çizersiniz ve kağıdı eski haline getirirsiniz. Canvasta da durum bu şekilde aslında. ``push()`` ve ``pop()`` fonksiyonları bir kapsayıcı görevi görüyor ve bu kağıdı çevirme gibi işlemleri sadece bir kısımda geçerli olacak halde kullanmayı sağlıyor. Döndürme işlemimizi bunların arasında yapacağız. ``translate()`` fonksiyonu x ve y olarak iki parametre alıyor ve canvasın origin noktasını değiştirmemizi sağlıyor. (0, 0) noktası bu origin noktası ve döndürme işlemi de bunun etrafında yapılıyor. Bu fonksiyona aslında ekrana çizeceğimiz şekli x ve y değerlerini gönderiyoruz ve (0, 0) noktası orası oluyor, ardından şekli çizerken de x ve y değerlerini 0 olarak giriyoruz. Origin noktasını değiştirdikten sonra ``rotate()`` fonksiyonu ile döndürme işlemini gerçekleştiriyoruz. p5.js açı değerlerinde varsayılan olarak radyan kullanır. Bu yüzden derece olarak göndereceğimiz açı değerini önce ``degrees()`` fonksiyonundan geçiriyoruz. İstersek ``setup()`` fonksiyonu içerisinde ``angleMode(DEGRESS)`` yazarak tüm açı değerlerini en baştan derece olarak, degrees() gibi bir fonksiyona gerek kalmadan kullanabiliriz. Ardından içini doldurarak dikdörtgeni ekrana basıyoruz ve söz ettiğim gibi (0, 0) değeri veriyoruz. Ancak dikdörtgen (200, 150) noktasına çiziliyor. ``pop()`` fonksiyonuyla da bu işlemi sonlandırdıktan sonra ekrana çizeceğimiz bir başka dikdörtgenin de döndürülmüş olmasını engelliyoruz.
+
+Şimdi basit bir Flappy Bird oyunu yapmaya çalışalım. Kodları baştaki haliyle bırakıyorum, setup() ve draw() içerisindeki createCanvas() ve background() fonksiyonları dışında eklediğim her şeyi siliyorum.
+
+Şöyle çok basit bir kuş resmi kullanalım:
+
+![Kuş](https://img.icons8.com/plumpy/48/000000/bird.png)
+```
+https://img.icons8.com/plumpy/48/000000/bird.png
+```
+
+Bir resmi eklemek için öncelikle setup() fonksiyonu içerisinde loadImage() fonksiyonuyla resmi adresinden çağırmamız, sonra da kullanacağımız yerde image() fonksiyonuyla bastırmamız gerekiyor. Bu arada setup() fonksiyonu içinde de başta yapılacak tek seferlik çizimler yapılabilir, o kısım kafa karıştırmasın.
+
+Bahsettiğim fonksiyonların parametreleri şu şekilde:
+
+```
+loadImage(URL)
+```
+
+```
+image(resim_ismi, x, y, [genişlik], [yukseklik])
+```
+
+Resmi aşağıdaki şekilde ekledim:
+
+{% highlight javascript %}
+let birdImage;
+
+function setup() {
+  createCanvas(640, 480);
+  
+  birdImage = loadImage('https://img.icons8.com/plumpy/48/000000/bird.png');
+}
+
+function draw() {
+  background(225);
+  
+  image(birdImage, 100, 100);
+}
+{% endhighlight %}
+
+Çıktı şu şekilde:
+
+![p5.js Web Editor demo](/images/blog/p5js/p5js-10.png)
+
+Resmi tam olarak bu şekilde kullanmayacağız. Bu sefer oyunu kodlayarak kısım kısım oyunun kodları üzerinden yorum satırları ile anlatmayı tercih edeceğim. Kodlar ise [şu](https://editor.p5js.org/hkrabs/sketches/La12j0k-l) adreste. Oynanış açısından çeşitli bug'lar olabilir, biraz daha üzerinde uğraşılırsa düzelecektir.
+
+
+{% highlight javascript %}
+
+// Oyunun başlayıp başlamadığı değerini tutmak için bir değişken oluşturuyoruz
+let play = false;
+
+// Kuşun aşağı düşebilmesi için bir yerçekimi değişkeni oluşturuyoruz
+const gravity = 0.2;
+
+// Kuşun özelliklerini ve eylemlerini derli toplu bir şekilde tutabilmek için bir obje içinde topluyoruz
+const bird = {
+  // Sprite, 2D oyun grafiklerine verilen isimdir
+  sprite: {
+    // Kuşun resmini çağırabilmek için src, resim çağrıldıktan sonra p5.js resim objesi olarak tutulabilsin diye img değeri ekledim ve başlangıç değerini null olarak belirledim
+    src: 'https://img.icons8.com/plumpy/48/000000/bird.png',
+    image: null
+  },
+  // Kuşun boyutları
+  size: {
+    width: 48,
+    height: 48
+  },
+  // Kuşun canvas içindeki konumu
+  positions: {
+    x: 75,
+    y: 200
+  },
+  // Kuşun dikey konumdaki hızı
+  speedY: 0,
+  // Kuşun sürekli olarak çalışacak güncelleme fonksiyonu
+  update: function() {
+    // Burada bir limit hız kontrolü var, kuşun hızı 8 birimi aşarsa 8'de sabit kalsın
+    // aksi takdirde yerçekimi ivmesi sürekli olarak hıza eklensin
+    if (this.speedY > 8) {
+      this.speedY = 8;
+    }
+    else {
+      // Kuşu yere doğru ivmeli bir şekilde çekiyoruz
+      this.speedY += gravity;
+    }
+    
+    // Hızı konuma ekleyerek konumu hıza göre değiştiriyoruz
+    this.positions.y += this.speedY;
+  },
+  
+  // Kuşun zıplamasını sağlayacak olan fonksiyon
+  jump: function() {
+    // Kuşun dikey hızını yukarı doğru 6 birim birden arttırıyoruz. Yerçekime doğru olan aşağı kısım pozitif olduğu için yukarı yönü negatif seçmek durumundayız
+    bird.speedY = -6;
+    
+    // Oyunu başlat
+    play = true;
+  }
+};
+
+// Boruları tutacak olan dizi
+let pipes = [];
+
+// Boruları oluşturacağımız taslağı tutan constructor fonksiyonu
+const Pipe = function(x, y, width, height) {
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+  
+  // Boruların her güncellendiğinde 4 birim sola kayması
+  this.update = function() {
+    this.x -= 4;
+  }
+}
+
+// Oyunun biteceği durumlarda çalışacak fonksiyon
+function gameOver() {
+  play = false;
+  
+  // Game over uyarısı
+  alert('Game over');
+
+  // Boruların tutulduğu dizi boşaltılıyor
+  pipes = [];
+  
+  // Kuşun pozisyonu ekranın ortalarına çekiliyor
+  bird.positions.y = 200;
+}
+
+// p5.js'in setup() fonksiyonu
+function setup() {
+  createCanvas(640, 480);
+  
+  // Açı değerlerini derece olarak kullanacağımız için açı modunu derece yapıyoruz
+  angleMode(DEGREES);
+  
+  // Kuşun resmini kendi içindeki URL'den seçerek, kendi içindeki objeye atıyoruz
+  bird.sprite.image = loadImage(bird.sprite.src);
+}
+
+// p5.js'in draw() fonksiyonu
+function draw() {
+  // Eğer oyun başlamamışsa
+  if (!play) {
+    // Canvasın arkaplanı siyaha boyansın
+    background(0);
+    
+    // Beyaz renkli, kenarlıksız, ortalanmış ve canvas'ın tam ortasında bir yazı yazılsın
+    fill(255);
+    noStroke();
+    textAlign(CENTER);
+    text('Jump to start', width / 2, height / 2);
+    
+    // draw() fonksiyonu buradan itibaren devam etmesin. play değişkeni true olduğunda bu kısım
+    // çalışmayacak ve draw() fonksiyonu normal bir şekilde devam edebilecek
+    return;
+  }
+  
+  // color() fonksiyonu string olarak HTML renk kodlarını alabilir. Burada bir renk kodunu ismi ile kullandık
+  background(color('skyblue'));
+  
+  // frameCount değişkeni oyunun başlamasından itibaren artar ve kaç adet frame geçildiğini tutar. Bu değer 80'in katları olduğunda çalışacak bir koşul yazıyoruz
+  if (frameCount % 80 === 0) {
+    
+    // Burada temel olarak üst ve alt boru çiftini rastgele konumdaki açıklıklarıyla oluşturup boruların tutulduğu diziye ekliyoruz
+    let pipeGap = random(100, 150);
+    
+    let topPipeLength = random(pipeGap, height - pipeGap * 2);
+    
+    pipes.push(
+      new Pipe(width, 0, 50, topPipeLength),
+      new Pipe(width, topPipeLength + pipeGap, 50, height - pipeGap - topPipeLength)
+    );
+  }
+  
+  // Kuşun kendi içindeki güncelleme fonksiyonunu çağırıyoruz
+  bird.update();
+  
+  // Döndürme işlemi yapılacağı için push() ve pop() fonksiyonlarıyla işlemleri sarmalıyoruz
+  push();
+  
+  // Döndürme noktasını kuşun ortasına getirdik
+  translate(
+    bird.positions.x - bird.size.width / 2, 
+    bird.positions.y - bird.size.height / 2
+  );
+  
+  // Kuşun hızı negatifse, yani yukarı doğru çıkıyorsa -30 derece dönsün;
+  // değilse, aşağı düşüyorsa 10 derece dönsün
+  if (bird.speedY < 0) {
+    rotate(-30);
+  }
+  else {
+    rotate(10);
+  }
+   
+  // Kuşun resmini basıyoruz. translate() fonksiyonunda origin noktasını kuşun ortasına getirdiğimiz için
+  // burada da kuşu kendi büyüklüğünün yarısı kadar geriden çiziyoruz
+  image(
+    bird.sprite.image, 
+    -bird.size.width / 2, 
+    -bird.size.height / 2,
+    bird.size.width,
+    bird.size.height
+  );
+  
+  // translate() ve rotate() ile işimiz bitti
+  pop();
+  
+  // Kuş aşağı ve yukarıda sınırları aşarsa oyun bitsin
+  if (
+    bird.positions.y > height ||
+    bird.positions.y < bird.size.height
+  ) {
+    gameOver();
+  }
+  
+  // Tüm boruları teker teker tarayalım
+  pipes.forEach(pipe => {
+    // Boruyu yeşilin bir tonuyla boyuyoruz
+    fill(50, 120, 50);
+    // Kenar çizgileri olmasın
+    noStroke();
+    // Boruyu çiziyoruz
+    rect(pipe.x, pipe.y, pipe.width, pipe.height);
+    
+    // Boru hareket edebilsin diye kendi içindeki güncelleme fonksiyonunu çağırıyoruz
+    pipe.update();
+    
+    // Eğer kuş boruyla çarpışmışsa oyunu bitir. Tüm borular için teker teker bu döngü çalışacağı için
+    // kuş herhangi biriyle çarpışmışsa bu kısım çalışacak
+    if (
+      bird.positions.x > pipe.x &&
+      bird.positions.y > pipe.y &&
+      bird.positions.x < pipe.x + pipe.width &&
+      bird.positions.y < pipe.y + pipe.height
+    ) {
+      gameOver();
+    }
+  });
+}
+
+// Herhangi bir tuşa bir kere basılmışsa
+function keyPressed() {
+  // Basılan tuş space veya yukarı ok tuşuysa
+  if (key === ' ' || key === 'ArrowUp') {
+    // Kuşu zıplat
+    bird.jump();
+  }
+}
+
+// Herhangi bir mouse butonuyla tıklanmışsa
+function mousePressed() {
+  // Basılan buton sol butonsa
+  if (mouseButton === LEFT) {
+    // Kuşu zıplat
+    bird.jump();
+  }
+}
+
+{% endhighlight %}
+
+Bu yazı da gittikçe uzadı. Geleceğe selamlar, hadi ben gidiyorum.
