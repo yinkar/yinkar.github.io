@@ -94,3 +94,16 @@ minima:
 
 pixelart-images: "/pixelart/images/"
 pixelart-thumbs: "/pixelart/thumbs/"
+
+
+defaults:
+  -
+    scope:
+      path: "resume"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "pdfs/**/*.pdf"
+    values:
+      sitemap: false
