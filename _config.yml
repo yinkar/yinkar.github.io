@@ -99,7 +99,7 @@ pixelart-thumbs: "/pixelart/thumbs/"
 defaults:
   -
     scope:
-      path: "resume"
+      path: "resume/"
     values:
       sitemap: false
   -
