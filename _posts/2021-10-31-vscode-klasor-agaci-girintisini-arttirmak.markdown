@@ -19,7 +19,9 @@ Bu girintileme seviyesini arttırabilmek için öncelikle <kbd>Ctrl</kbd> + <kbd
 
 Global ayarlar için kullanılan JSON dosyası açılacak. Buraya yeni bir değer ekleyeceğiz. Buradaki JSON objesine
 
-```"workbench.tree.indent": 30```
+```
+"workbench.tree.indent": 30
+```
 
 gibi bir değer ekleyerek kaydettiğinizde girintilemenin arttığını göreceksiniz.
 

@@ -440,4 +440,8 @@ function mousePressed() {
 
 {% endhighlight %}
 
+Son olarak oyunun çıktısını da şöyle vereyim:
+
+![Flappy Bird klonu](/images/blog/p5js/p5js-11.png)
+
 Bu yazı da gittikçe uzadı. Geleceğe selamlar, hadi ben gidiyorum.

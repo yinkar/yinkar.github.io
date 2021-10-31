@@ -14,9 +14,9 @@ Geçenlerde şöyle bir şey oluşturdum:
 
 Terminali açarak şunu yazdığınızda, eğer terminaliniz 256 rengi destekliyorsa siz de bu sonucu alacaksınız:
 
-```
+{% highlight bash %}
 curl -L git.io/nightstreet
-```
+{% endhighlight %}
 
 [Kaynak kodu](https://gist.github.com/yinkar/3a7916a370bab438ef9ae05913cf5ade) da Github Gist üzerinde yer alıyor.
 
@@ -28,9 +28,9 @@ Kendisinin [Github Gist adresini](https://gist.github.com/xero) de vereyim.
 
 Şimdi tek tek bunun nasıl çalıştığının üzerinden geçelim. ``curl``, en basit tanımla uzak bir adresteki içeriğe erişmenizi sağlayan bir yazılımdır. Genelde HTTP istemcisi olarak kullanılsa da birçok protokolü destekler. Biz burada HTTP istemcisi olarak kullanıyoruz. cURL ile bir web sitesine terminal üzerinden bağlanabilirsiniz:
 
-```
+{% highlight bash %}
 curl google.com
-```
+{% endhighlight %}
 
 ![curl google.com](/images/blog/ansi-art/ansi-art-3.png)
 
@@ -109,9 +109,9 @@ Biz bash komutlarından echo'yu kullanacağız. Fakat echo kullanırken kaçış
 
 Şimdi bir örnek verelim ve bunun üzerinden gidelim. Şu komutu terminal üzerinde deneyebilirsiniz:
 
-```
+{% highlight bash %}
 echo -e "\033[31mDelirmek üzereyim"
-```
+{% endhighlight %}
 
 Çıktısı da şu şekilde olacak:
 
@@ -134,9 +134,9 @@ Sonrasında biraz sinir bozucu bir şekilde gelen ``[`` karakteri var. Sinir boz
 
 Hadi bir de arkaplan renkleri için deneyelim. Aşağıdaki ifade kırmızı bir arkaplana sahip bir metin gösterecek.
 
-```
+{% highlight bash %}
 echo -e "\033[41mÇiğköfteyi mantıklı bulmuyorum"
-```
+{% endhighlight %}
 
 ![ANSI art çıktısı](/images/blog/ansi-art/ansi-art-10.png)
 
@@ -155,9 +155,9 @@ Arkaplan renk kodları için de gerekli kodların tablosu da şu:
 
 İki kodu beraber kullanabileceğimizi söylemiştim.
 
-```
+{% highlight bash %}
 echo -e "\033[045;031mBir kilo domates mantıken 1000 domates demektir"
-```
+{% endhighlight %}
 
 ![ANSI art çıktısı](/images/blog/ansi-art/ansi-art-11.png)
 
@@ -165,9 +165,9 @@ Korkunç bir göz infazı oldu sanki.
 
 Önceki yazdığımız kodlarda bir eksik var. Söz konusu kodları kullandığımızda yazının geri kalan tüm kısmı da aynı şekilde stillendirilecek. Bu yüzden aslında bir kapanış ifadesine ihtiyacımız var. Stili sıfırlamak için ``\033[0m`` kodunu kullanıyoruz.
 
-```
+{% highlight bash %}
 echo -e "\033[035mBu bir\033[0m Bu iki"
-```
+{% endhighlight %}
 
 ![ANSI art çıktısı](/images/blog/ansi-art/ansi-art-12.png)
 
@@ -187,9 +187,9 @@ echo -e "\033[035mBu bir\033[0m Bu iki"
 
 Bunlardan benim en ilgimi çeken yanıp sönme kodu oldu. Arkaplan ile beraber kullanalım:
 
-```
+{% highlight bash %}
 echo -e "\033[05;41mCiğerimiz kalmamıştır"
-```
+{% endhighlight %}
 
 ![ANSI art çıktısı](/images/blog/ansi-art/ansi-art-13.gif)
 
