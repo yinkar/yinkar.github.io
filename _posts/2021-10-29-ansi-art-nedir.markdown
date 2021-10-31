@@ -2,7 +2,6 @@
 layout: post
 title: "ANSI Art Nedir"
 date: 2021-10-29 11:18:00 +0300
-categories: blog
 author: Hüseyin Karabaş
 description: Terminal'de pixel art sanatı
 featured-image: /images/blog/ansi-art/ansi-art-cover.png
