@@ -124,7 +124,7 @@ Turing makinesine de ileride bir yazıda değiniriz belki. Basitçe açıklamak 
 
 Turing makinesi konseptinde bir okuma kafası olur, makinenin ne yapması gerektiğini belirleyen komutları içeren bir geçiş tablosu olur ve teorik olarak sonsuz kabul edilen, teyp diyebileceğimiz bir hafıza şeridi olur. Makine bu şeritten okur, okuduğu değere göre bir eylem gerçekleştirebilir ve bu şeride bir değer yazabilir.
 
-Bizim de burada, ``^`` sembolüyle gösterdiğim bir okuyucu kafa var. Bu bir pointer'dır, C'deki kullanımlarına da girebiliriz, şimdilik bu yazıda girmeyi düşünmüyorum. Pointer, bir değişkenin hafızadaki adresi tutar. Biz istediğimiz zaman o pointer'ı kullanarak o adrese erişebiliriz veya pointer'ın değerini değiştirerek pointer'ın işaret ettiği adresi kaydırabiliriz.
+Bizim de burada, ``^`` sembolüyle gösterdiğimiz bir okuyucu kafa var. Bu bir pointer'dır, C'deki kullanımlarına da girebiliriz, şimdilik bu yazıda girmeyi düşünmüyorum. Pointer, bir değişkenin hafızadaki adresini tutar. Biz istediğimiz zaman o pointer'ı kullanarak o adrese erişebiliriz veya pointer'ın değerini değiştirerek pointer'ın işaret ettiği adresi kaydırabiliriz.
 
 ``+`` sembolünün, işaret edilen hücredeki değeri bir arttırdığını söylemiştim. Şimdi şöyle bir program yazalım:
 
