@@ -13,7 +13,7 @@ Bir dilin karmaşık bir yapısıyla karşılaşıldığında genelde Brainfuck 
 
 Dün biraz Brainfuck öğrendim. Uzun zamandır aklımdaydı aslında. Youtube'a ismini yazıp, geçmiş aramalardan görerek hatırlayabilmek istiyordum fakat Youtube, üzerine vazife olmadan brainfuck kelimesini sansürlüyor. Böyle zırva özellikleri kapatamıyorsun da.
 
-Brainfuck bir ezoterik programlama dili olarak geçiyor. İleride ezoterik programlama dillerini konu alacağım bir yazı olacak. Aslında birçoğu için parodi programlama dili daha uygun bir isim olabilirdi. Brainfuck'ın oluşturulmasındaki temel amaç, en küçük boyuttaki derleyiciye sahip olan bir dil yaratmak. Brainfuck o kadar temel kurallara sahip ki, dili öğrendikten sonra derleyicisini veya yorumlayıcısını kodlamayı birçok insan başarabilecektir. Kendisi turing-complete bir dil, bu da demek oluyor ki bu dil ile teorik olarak bütün tüm çözebilecek, tüm programlar yazılabilir.
+Brainfuck bir ezoterik programlama dili olarak geçiyor. İleride ezoterik programlama dillerini konu alacağım bir yazı olacak. Aslında birçoğu için parodi programlama dili daha uygun bir isim olabilirdi. Brainfuck'ın oluşturulmasındaki temel amaç, en küçük boyuttaki derleyiciye sahip olan bir dil yaratmak. Brainfuck o kadar temel kurallara sahip ki, dili öğrendikten sonra derleyicisini veya yorumlayıcısını kodlamayı birçok insan başarabilecektir. Kendisi turing-complete bir dil, bu da demek oluyor ki bu dil ile teorik olarak tüm problemleri çözebilecek programlar yazılabilir.
 
 Brainfuck dilinin teorik kısmını öğrenmek çok basit aslında, vakit alacak olan kısım dilin yapısı gereği geliştirilmek durumunda olan algoritmalar. Şimdi hafif hafif dilin yapısına giriş yapalım.
 
