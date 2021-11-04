@@ -220,7 +220,7 @@ Bunu görünce Brainfuck'ın adına yakışır noktalara gelmeye başladığım�
 Bunu, sonucu ilk hücrede olacak şekilde hesaplamak isteseydiniz şöyle olurdu:
 
 ```
->++++++++[<++++++++>-]<+.
+> ++++++++ [ < ++++++++ > - ] < +.
 ```
 
 Hafıza:
