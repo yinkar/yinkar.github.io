@@ -67,31 +67,31 @@ Hex kodlarını 6 haneli olarak yazabileceğiniz gibi 3 haneli olarak yazmanız 
 
 Hex kodlarındaki her değeri aynı tutarsanız grinin çeşitli tonlarını elde edeceksiniz:
 
-<div style="background-color: #000; width: 70px; height: 20px">
+<div style="background-color: #000; width: 70px; height: 20px; color: #fff">
     #000
 </div>
-<div style="background-color: #111; width: 70px; height: 20px">
+<div style="background-color: #111; width: 70px; height: 20px; color: #fff">
     #111
 </div>
-<div style="background-color: #222; width: 70px; height: 20px">
+<div style="background-color: #222; width: 70px; height: 20px; color: #fff">
     #222
 </div>
-<div style="background-color: #333; width: 70px; height: 20px">
+<div style="background-color: #333; width: 70px; height: 20px; color: #fff">
     #333
 </div>
-<div style="background-color: #444; width: 70px; height: 20px">
+<div style="background-color: #444; width: 70px; height: 20px; color: #fff">
     #444
 </div>
-<div style="background-color: #555; width: 70px; height: 20px">
+<div style="background-color: #555; width: 70px; height: 20px; color: #fff">
     #555
 </div>
-<div style="background-color: #666; width: 70px; height: 20px">
+<div style="background-color: #666; width: 70px; height: 20px; color: #fff">
     #666
 </div>
-<div style="background-color: #777; width: 70px; height: 20px">
+<div style="background-color: #777; width: 70px; height: 20px; color: #fff">
     #777
 </div>
-<div style="background-color: #888; width: 70px; height: 20px">
+<div style="background-color: #888; width: 70px; height: 20px; color: #fff">
     #888
 </div>
 <div style="background-color: #999; width: 70px; height: 20px; color: #000">
