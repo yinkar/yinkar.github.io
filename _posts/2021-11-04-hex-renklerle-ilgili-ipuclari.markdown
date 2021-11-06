@@ -121,7 +121,7 @@ Gri tonlar için ``#c0c0c0``, ``#1b1b1b`` gibi ara değerler de kullanmanız mü
 
 6 haneli hex değerleri kullanırken sona 2 hane daha ekleyerek RGBA formatında kullanabilirsiniz, yani renge saydamlık özelliği verebilirsiniz. 3 haneli hex değerlerinde de bu doğal olarak 1 hane fazla olacak.
 
-%50 opaklığa sahip, yani yarısaydam bir kırmızı renk şöyle renk koduyla oluşturulabilir:
+%50 opaklığa sahip, yani yarısaydam bir kırmızı renk şöyle bir renk koduyla oluşturulabilir:
 
 ```
 #ff000088
@@ -131,3 +131,4 @@ Gri tonlar için ``#c0c0c0``, ``#1b1b1b`` gibi ara değerler de kullanmanız mü
 #f008
 ```
 
+Sanırım bu kadar yeterli.
