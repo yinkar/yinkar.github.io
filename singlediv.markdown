@@ -6,7 +6,7 @@ title: Single Div
 
 <style class="custom-style">
     .item-container {
-        background-color: #333;
+        background-color: lightslategray;
         height: 600px;
         width: 100%;
         margin: 0;
@@ -14,7 +14,7 @@ title: Single Div
         display: grid;
         place-content: center;
     }
-
+    
     .bottle {
         background-color: #fff;
         height: 300px;
@@ -42,6 +42,7 @@ title: Single Div
             -13px -160px 12px -73px #444, -20px -150px 1px -60px black,
             30px -150px 1px -68px black;
         animation: bottle 6s linear infinite 1s;
+        zoom: .7;
     }
 
     .bottle::before {
