@@ -14,3 +14,4 @@ permalink: /toys/
 - [Emoji Favicon](/toys/emoji-favicon/)
 - [Word Counter](/toys/word-counter/)
 - [ANSI Art Painter](/toys/ansi-art-painter/)
+- [Brainfkr](/toys/brainfkr/)

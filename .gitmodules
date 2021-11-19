@@ -28,3 +28,6 @@
 [submodule "toys/ansi-art-painter"]
 	path = toys/ansi-art-painter
 	url = https://github.com/yinkar/ansi-art-painter.git
+[submodule "toys/brainfkr"]
+	path = toys/brainfkr
+	url = git@github.com:yinkar/brainfkr.git
