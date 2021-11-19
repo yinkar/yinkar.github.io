@@ -38,7 +38,7 @@ Aslında bahsettiğim şu operatör karakterlerine bakarak neyin ne için kullan
 
 Brainfuck dilinde girdi ve çıktı sözkonusu olduğunda hücrelerin değerleri birer ASCII karakteri olarak yorumlanıyor. Örneğin üzerinde bulunduğumuz hafıza bloğunun değeri 65 olduğunda, ``.`` karakteriyle ekrana ``A`` çıktısını basıyoruz.
 
-Aslında [/toys](Toys) sayfasında bir ASCII tablosu oluşturmayı düşünüyorum, tercihen markdown kullanarak. Bunun yanında periyodik tablo, elektromanyetik spektrum, akor cetveli gibi farklı disiplinlerdeki farklı referans tablolarını da kodlayarak bu siteye eklemek gibi bir fikrim var. Şimdilik ASCII tablosundaki rakamları ve büyük ve küçük harfleri gösteren bir tablo oluşturayım buraya:
+Aslında [Toys](/toys) sayfasında bir ASCII tablosu oluşturmayı düşünüyorum, tercihen markdown kullanarak. Bunun yanında periyodik tablo, elektromanyetik spektrum, akor cetveli gibi farklı disiplinlerdeki farklı referans tablolarını da kodlayarak bu siteye eklemek gibi bir fikrim var. Şimdilik ASCII tablosundaki rakamları ve büyük ve küçük harfleri gösteren bir tablo oluşturayım buraya:
 
 
 | #   | Karakter |

@@ -69,7 +69,7 @@ Görüldüğü gibi, zaman damgası kısmının sonunda bir flag var. Bu onun bi
 
 ![Wayback Machine resim adresi](/images/blog/wayback-machine/wayback-machine-7.png)
 
-Flag'i sildiğimizde normal bir sayfa gibi açıldı ve Wayback Machine'in çerçevesi de eklendi. Buradan aklınıza şu gelebilir: getirilen bir sayfanın zaman damgasının sonuna ``im_`` eklediğimizde o sayfada Wayback Machine çerçevesi çıkmayacak ve normal bir siteymiş gibi link verebileceğiz. Bu yöntem çalışıyor, ama doğru bir yöntem sayılmaz sayılmaz. Bunun için farklı flag'leri var Wayback Machine'in. Şimdi onları bir tablo olarak vereyim:
+Flag'i sildiğimizde normal bir sayfa gibi açıldı ve Wayback Machine'in çerçevesi de eklendi. Buradan aklınıza şu gelebilir: getirilen bir sayfanın zaman damgasının sonuna ``im_`` eklediğimizde o sayfada Wayback Machine çerçevesi çıkmayacak ve normal bir siteymiş gibi link verebileceğiz. Bu yöntem çalışıyor, ama doğru bir yöntem sayılmaz. Bunun için farklı flag'leri var Wayback Machine'in. Şimdi onları bir tablo olarak vereyim:
 
 | Flag   | İsim       | Açıklama                                                                        |
 |--------|------------|---------------------------------------------------------------------------------|
