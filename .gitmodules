@@ -30,4 +30,4 @@
 	url = https://github.com/yinkar/ansi-art-painter.git
 [submodule "toys/brainfkr"]
 	path = toys/brainfkr
-	url = git@github.com:yinkar/brainfkr
+	url = https://github.com/yinkar/brainfkr
