@@ -13,6 +13,7 @@ title: Single Div
         padding: 0;
         display: grid;
         place-content: center;
+        overflow: hidden;
     }
     
     .bottle {
