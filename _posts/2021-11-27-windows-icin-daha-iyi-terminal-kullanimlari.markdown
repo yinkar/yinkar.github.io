@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windows için Daha İyi Terminal Kullanımları
-date: 2021-10-31 09:51:00 +0300
+date: 2021-11-27 09:26:00 +0300
 author: Hüseyin Karabaş
 description: Visual Studio Code'da kenar çubuğundaki yetersiz ağaç girintilemesini arttırmak 
 featured-image: /images/blog/windows-komut-satiri/windows-komut-satiri-cover.png
