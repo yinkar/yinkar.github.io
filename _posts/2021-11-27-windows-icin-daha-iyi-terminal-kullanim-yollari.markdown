@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Windows için Daha İyi Terminal Kullanımları
+title: Windows için Daha İyi Terminal Kullanım Yolları
 date: 2021-11-27 09:26:00 +0300
 author: Hüseyin Karabaş
 description: Visual Studio Code'da kenar çubuğundaki yetersiz ağaç girintilemesini arttırmak 
