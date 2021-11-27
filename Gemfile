@@ -39,3 +39,5 @@ gem "jekyll-gist"
 gem "jekyll-sitemap"
 
 gem "jekyll-sass-converter"
+
+gem "webrick", "~> 1.7"
