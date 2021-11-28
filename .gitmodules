@@ -31,3 +31,6 @@
 [submodule "toys/brainfkr"]
 	path = toys/brainfkr
 	url = https://github.com/yinkar/brainfkr
+[submodule "toys/yilgin"]
+	path = toys/yilgin
+	url = https://github.com/yinkar/yilgin
