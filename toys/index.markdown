@@ -15,4 +15,5 @@ permalink: /toys/
 - [Word Counter](/toys/word-counter/)
 - [ANSI Art Painter](/toys/ansi-art-painter/)
 - [Brainfkr](/toys/brainfkr/)
-- [Yilgin](/toys/yilgin/)
+- [Yılgın](/toys/yilgin/)
+- [Window Toy](/toys/window-toy/)

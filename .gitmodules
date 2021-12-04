@@ -34,3 +34,6 @@
 [submodule "toys/yilgin"]
 	path = toys/yilgin
 	url = https://github.com/yinkar/yilgin
+[submodule "toys/window-toy"]
+	path = toys/window-toy
+	url = https://github.com/yinkar/window-toy.git
