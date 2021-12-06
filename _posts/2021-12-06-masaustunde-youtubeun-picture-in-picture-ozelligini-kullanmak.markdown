@@ -14,9 +14,11 @@ Günümüz modern tarayıcıları picture-in-picture API'ı taşıyor. Bu sayede
 Eğer birden fazla monitörünüz yoksa, bir işi hallederken bir yandan da ara ara bir videoya bakmak istiyorsanız bu özellik işinizi görecektir. Nedense çok rahat ulaşılır bir yapısı yok, o yüzden fazla göz önünde bulunmuyor. Youtube bunu kendi menüsünde bir seçenek olarak sunmayı tercih etmiyor, fakat Chrome'un sağ tık menüsüne ulaşarak kullanabiliyoruz.
 
 Bu özelliği kullanmak oldukça basit. Öncelikle izliyor olduğunuz videonun player'ına sağ tıklayın.
+
 ![Youtube picture-in-picture](/images/blog/youtube-picture-in-picture/youtube-picture-in-picture-1.png)
 
 Gördüğünüz gibi aradığımız seçenek burada yok. Bu yüzden bu kısım çok önemli. Mouse'u hareket ettirmeden bir kez daha sağ tıklayın. Bu sefer tarayıcının kendi built-in menüsü açılacak.
+
 ![Youtube picture-in-picture](/images/blog/youtube-picture-in-picture/youtube-picture-in-picture-2.png)
 
 Burada artık "Pencere içinde pencere" veya "Picture in picture" seçeneğini görüyor olacaksınız, artık işletim sisteminizin dili neyse. Tıkladığınızda artık bu tarayıcı penceresinden bağımsız, yüzen bir video penceresine sahip olacaksınız.
