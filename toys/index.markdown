@@ -17,3 +17,4 @@ permalink: /toys/
 - [Brainfkr](/toys/brainfkr/)
 - [Yılgın](/toys/yilgin/)
 - [Window Toy](/toys/window-toy/)
+- [ASCII Table](/toys/ascii-table/)

@@ -37,3 +37,6 @@
 [submodule "toys/window-toy"]
 	path = toys/window-toy
 	url = https://github.com/yinkar/window-toy.git
+[submodule "toys/ascii-table"]
+	path = toys/ascii-table
+	url = https://github.com/yinkar/ascii-table.git
