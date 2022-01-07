@@ -96,7 +96,7 @@ ANSI art dediğimiz kavram ise buna benziyor, fakat kaçış karakterleri ile me
 
 ANSI Art Bulletin Board System (BSS)'larda çok kullanılan bir yöntem. BBS, 1980'lerle 1990'larda yaygın olarak kullanılan, terminal üzerinden bağlanılan sistemlerin ismi. Web'in çok yaygın olmadığı, hatta var olmadığı zamanlarda kullanılan sistemler bunlar. Benim de çok ilgimi çekiyor, o dönemlerde o dünyanın içinde bulunmak isterdim açıkçası. Çocukken teletext dahi çok ilgimi çekerdi. Aslında teletext dahilinde de bir miktar ANSI art'tan söz edebiliriz. Belki bu yazının devamında teletext art'tan da biraz bahsederim.
 
-BBS çok eski bir kavram olsa da, BBS konseptini halen sunan insanlar var. Bağlanmak için tek gereken ise bir Telnet istemcisi. BBS'lerle ilgili ileride bir yazı yazabilirim fakat şimdi örnek olarak bir BBS'e Telnet üzerinden bağlan alım ve orada da ANSI art kullanımını görelim:
+BBS çok eski bir kavram olsa da, BBS konseptini halen sunan insanlar var. Bağlanmak için tek gereken ise bir Telnet istemcisi. BBS'lerle ilgili ileride bir yazı yazabilirim fakat şimdi örnek olarak bir BBS'e Telnet üzerinden bağlanalım ve orada da ANSI art kullanımını görelim:
 ![Örnek BBS](/images/blog/ansi-art/ansi-art-8.png)
 
 ANSI Art çizebilmek için [şu](http://www.roysac.com/roy-sac_downloads_links.html) tarz uygulamalar mevcutmuş.

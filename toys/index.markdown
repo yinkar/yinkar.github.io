@@ -11,7 +11,7 @@ permalink: /toys/
 - [Uçank](/toys/ucank/)
 - [ASCII Table](/toys/ascii-table/)
 - [Brainfkr](/toys/brainfkr/)
-- [Seken Aksu](/toys/seken-aksu/)
+- [Sektir](/toys/sektir/)
 - [Bouncing Ball on JS Console](/toys/bouncing-ball-on-js-console/)
 - [Web Sandbox](/toys/web-sandbox/)
 - [Yinkar Calc](/toys/yinkar-calc/)

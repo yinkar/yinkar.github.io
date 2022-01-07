@@ -1,6 +1,3 @@
-[submodule "toys/seken-aksu"]
-	path = toys/seken-aksu
-	url = https://github.com/yinkar/seken-aksu
 [submodule "toys/ucank"]
 	path = toys/ucank
 	url = https://github.com/yinkar/ucank.git
@@ -40,3 +37,6 @@
 [submodule "toys/ascii-table"]
 	path = toys/ascii-table
 	url = https://github.com/yinkar/ascii-table.git
+[submodule "toys/sektir"]
+	path = toys/sektir
+	url = git@github.com:yinkar/sektir
