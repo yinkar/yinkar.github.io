@@ -39,4 +39,4 @@
 	url = https://github.com/yinkar/ascii-table.git
 [submodule "toys/sektir"]
 	path = toys/sektir
-	url = git@github.com:yinkar/sektir
+	url = https://github.com/yinkar/sektir.git
