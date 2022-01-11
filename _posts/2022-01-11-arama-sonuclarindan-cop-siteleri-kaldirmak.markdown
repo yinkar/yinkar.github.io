@@ -4,7 +4,7 @@ title: Arama Sonuçlarından Çöp Siteleri Kaldırmak
 date: 2022-01-11 07:40:00 +0300
 author: Hüseyin Karabaş
 description: Arama motoru kullandığınızda sürekli karşılaştığınız leş manzarayı engellemek
-featured-image: /images/blog/temiz-arama-sonuclari/temiz-arama-sonuclari-cover.png
+featured-image: /images/blog/temiz-arama-sonuclari/temiz-arama-sonuclari-cover.jpg
 featured-image-alt: Arama sonuçlarındaki çöp siteleri
 categories: internet
 ---
