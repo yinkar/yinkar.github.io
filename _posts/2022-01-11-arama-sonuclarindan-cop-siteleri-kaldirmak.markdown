@@ -55,4 +55,6 @@ Benim kendi oluşturduğum sorgu şu şekilde:
 
 Bunu da kullanabilirsiniz. Arama sonuçlarında karşılaştıkça o listeye daha fazlasını eklerim, fakat yazıyı güncellemeye kesin üşenirim.
 
+Bunu da yaptıktan sonra eklediğiniz satırın yanındaki üç noktaya tıklayarak varsayılan yapın. Artık adres çubuğuyla arama yaptığınızda arama kutucuğunda uzun bir metin, fakat arama sonuçlarında daha temiz bir dünya, daha yeşil bir gelecek görüyor olacaksınız.
+
 Hadi herkese iyi arama sonuçları.
