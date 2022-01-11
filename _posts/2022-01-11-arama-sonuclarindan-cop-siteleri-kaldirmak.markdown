@@ -40,7 +40,7 @@ Görüldüğü üzere burası adres çubuğunda arama yapabileceğiniz arama mot
 
 Biliyorsunuzdur, Google sonuçlarını filtrelemek için birkaç güzel anahtar kelime ve operatör vardır. Bize burada iki tanesi lazım olacak: arama sonuçlarının istediğimiz siteden olmasını sağlayan ``site:`` ifadesi ve arama sonuçlarından istediğimiz ifadeleri çıkartmak için kullanabileceğimiz ``-`` operatörü. Bu ikisini kombine edeceğiz ve arama sonuçlarından istediğimiz siteleri çıkaracağız.
 
-Örneğin Google'da instagram araması yaptığınızda doğal olarak en başta instagram.com adresi çıkacaktır`, fakat ``instagram -site:instagram.com`` şeklinde bir arama yaptığınızda çıkan sonuçlardan hiçbirinin instagram.com'dan olmadığnıı göreceksiniz.
+Örneğin Google'da instagram araması yaptığınızda doğal olarak en başta instagram.com adresi çıkacaktır, fakat ``instagram -site:instagram.com`` şeklinde bir arama yaptığınızda çıkan sonuçlardan hiçbirinin instagram.com'dan olmadığnıı göreceksiniz.
 
 Anlayacağınız üzere sorgu URL'sine ``-site:...`` ifadesini ekleyeceğiz. Tabii araya boşluk da koymak lazım. Boşluk karakterini URL'lerde ``+`` veya ``%20`` ile gösterebiliriz. Biz burada + kullanalım.
 
