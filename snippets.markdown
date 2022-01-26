@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /kod-parcalari/
-title: Kod Parçaları
+permalink: /snippets/
+title: Snippers
 ---
 
 #### mandelbrot-set-on-terminal-high-resolution.go
