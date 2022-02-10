@@ -40,3 +40,6 @@
 [submodule "toys/sektir"]
 	path = toys/sektir
 	url = https://github.com/yinkar/sektir.git
+[submodule "toys/yinkar-icons"]
+	path = toys/yinkar-icons
+	url = https://github.com/yinkar/yinkar-icons.git
