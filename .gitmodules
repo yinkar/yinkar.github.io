@@ -16,9 +16,6 @@
 [submodule "toys/game-of-life"]
 	path = toys/game-of-life
 	url = https://github.com/yinkar/game-of-life.git
-[submodule "toys/emoji-favicon"]
-	path = toys/emoji-favicon
-	url = https://github.com/yinkar/emoji-favicon.git
 [submodule "toys/word-counter"]
 	path = toys/word-counter
 	url = https://github.com/yinkar/word-counter.git
@@ -40,6 +37,3 @@
 [submodule "toys/sektir"]
 	path = toys/sektir
 	url = https://github.com/yinkar/sektir.git
-[submodule "toys/yinkar-icons"]
-	path = toys/yinkar-icons
-	url = https://github.com/yinkar/yinkar-icons.git
