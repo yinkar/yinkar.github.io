@@ -7,7 +7,7 @@ permalink: /toys/
 - [ANSI Art Painter](/toys/ansi-art-painter/)
 - [Game of Life](/toys/game-of-life/)
 - [Window Toy](/toys/window-toy/)
-- [Emoji Favicon](/toys/emoji-favicon/)
+- [Emoji Favicon](/emoji-favicon/)
 - [Uçank](/toys/ucank/)
 - [ASCII Table](/toys/ascii-table/)
 - [Brainfkr](/toys/brainfkr/)
