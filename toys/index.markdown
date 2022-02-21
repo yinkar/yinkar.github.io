@@ -9,7 +9,7 @@ permalink: /toys/
 - [Window Toy](/toys/window-toy/)
 - [Emoji Favicon](/emoji-favicon/)
 - [Uçank](/toys/ucank/)
-- [ASCII Table](/toys/ascii-table/)
+- [ASCII Table](/ascii-table/)
 - [Brainfkr](/toys/brainfkr/)
 - [Sektir](/toys/sektir/)
 - [Bouncing Ball on JS Console](/toys/bouncing-ball-on-js-console/)
