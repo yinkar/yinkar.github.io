@@ -1,36 +1,9 @@
-[submodule "toys/ucank"]
-	path = toys/ucank
-	url = https://github.com/yinkar/ucank.git
-[submodule "toys/bouncing-ball-on-js-console"]
-	path = toys/bouncing-ball-on-js-console
-	url = https://github.com/yinkar/bouncing-ball-on-js-console.git
-[submodule "toys/web-sandbox"]
-	path = toys/web-sandbox
-	url = https://github.com/yinkar/web-sandbox.git
-[submodule "toys/yinkar-calc"]
-	path = toys/yinkar-calc
-	url = https://github.com/yinkar/yinkar-calc.git
-[submodule "toys/p2p-messenger"]
-	path = toys/p2p-messenger
-	url = https://github.com/yinkar/p2p-messenger.git
-[submodule "toys/game-of-life"]
-	path = toys/game-of-life
-	url = https://github.com/yinkar/game-of-life.git
-[submodule "toys/word-counter"]
-	path = toys/word-counter
-	url = https://github.com/yinkar/word-counter.git
-[submodule "toys/ansi-art-painter"]
-	path = toys/ansi-art-painter
-	url = https://github.com/yinkar/ansi-art-painter.git
-[submodule "toys/brainfkr"]
-	path = toys/brainfkr
-	url = https://github.com/yinkar/brainfkr
-[submodule "toys/yilgin"]
-	path = toys/yilgin
-	url = https://github.com/yinkar/yilgin
-[submodule "toys/window-toy"]
-	path = toys/window-toy
-	url = https://github.com/yinkar/window-toy.git
-[submodule "toys/sektir"]
-	path = toys/sektir
-	url = https://github.com/yinkar/sektir.git
+[submodule "themes/papermod"]
+	path = themes/papermod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/hello-friend"]
+	path = themes/hello-friend
+	url = https://github.com/panr/hugo-theme-hello-friend.git
+[submodule "themes/compost"]
+	path = themes/compost
+	url = https://github.com/canstand/compost.git
