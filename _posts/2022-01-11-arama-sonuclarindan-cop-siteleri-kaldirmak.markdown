@@ -7,6 +7,7 @@ description: Arama motoru kullandığınızda sürekli karşılaştığınız le
 featured-image: /images/blog/temiz-arama-sonuclari/temiz-arama-sonuclari-cover.jpg
 featured-image-alt: Arama sonuçlarındaki çöp siteleri
 categories: internet
+published: false
 ---
 
 Eminim her gün yüzlerce defa karşılaşıyorsunuzdur, Google gibi bir arama motorunda arama yaparsınız ve sonuçlar öylesine çöplük halindedir ki aradığınızı bir türlü bulamazsınız. Neyden bahsettiğimi biliyorsunuz; haber sitesi olduğunu iddia eden, birçoğu çağın gerisinde kalmış ve var olmaya devam etmek için çırpınan web siteleri. Haber sunmak gibi bir dertleri olmadığı için bunları haber sitesi olarak adlandırmıyorum. Özellikle insanların arama yapacağı kelimeleri seçerek, o konuda sayfalar oluştururlar ve sonuçları işgal ederler. Bayram tatilinin tarihini aratırsınız, bunlar çıkar, bir kelimenin doğru yazılışını aratırsınız, bunlar çıkar. Çıkan bu sayfaları da içerikten yoksundur, çöplük halindeki onca boş laf kalabalığının arasına tek kelimelik bilgiyi -eğer şanslıysanız o da- gizlerler. Haber diye sundukları içerikleri de galeri diye, farklı farklı sayfalara bölerek sunmaları ve clickbait yapmaları konusuna da değinmiyorum.

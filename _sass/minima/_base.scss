@@ -82,6 +82,7 @@ ul, ol {
 }
 
 li {
+  color: #aaa;
   > ul,
   > ol {
     margin-bottom: 0;
@@ -149,9 +150,9 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  border: 1px solid $grey-color-dark;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #444;
 }
 
 code {
@@ -234,21 +235,21 @@ table {
   text-align: $table-text-align;
   color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid rgba(255, 255, 255, .1);
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: rgba(255, 255, 255, .05);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .1);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid rgba(255, 255, 255, .1);
   }
 }

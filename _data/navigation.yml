@@ -1,4 +1,4 @@
-- name: Toys
+- name: Fidgets
   link: /toys/
 - name: Icons
   link: /yinkar-icons/
@@ -12,5 +12,5 @@
   link: /snippets/
 - name: Single Div
   link: /single-div/
-- name: Hakkında
+- name: About
   link: /hakkinda/

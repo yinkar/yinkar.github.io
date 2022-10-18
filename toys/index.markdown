@@ -4,17 +4,15 @@ title: Toys
 permalink: /toys/
 ---
 
-- [ANSI Art Painter](/toys/ansi-art-painter/)
-- [Game of Life](/toys/game-of-life/)
-- [Window Toy](/toys/window-toy/)
-- [Emoji Favicon](/emoji-favicon/)
-- [Uçank](/toys/ucank/)
 - [ASCII Table](/ascii-table/)
+- [Window Toy](/toys/window-toy/)
+- [ANSI Art Painter](/toys/ansi-art-painter/)
+- [Emoji Favicon](/emoji-favicon/)
+- [Game of Life](/toys/game-of-life/)
+- [Uçank](/toys/ucank/)
 - [Brainfkr](/toys/brainfkr/)
 - [Sektir](/toys/sektir/)
 - [Bouncing Ball on JS Console](/toys/bouncing-ball-on-js-console/)
 - [Web Sandbox](/toys/web-sandbox/)
-- [Yinkar Calc](/toys/yinkar-calc/)
 - [P2P Messenger](/toys/p2p-messenger/)
-- [Word Counter](/toys/word-counter/)
 - [Yılgın](/toys/yilgin/)
