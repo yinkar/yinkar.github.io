@@ -1,13 +1,3 @@
-[submodule "themes/papermod"]
-	path = themes/papermod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-[submodule "themes/hello-friend"]
-	path = themes/hello-friend
-	url = https://github.com/panr/hugo-theme-hello-friend.git
-[submodule "themes/compost"]
-	path = themes/compost
-	url = https://github.com/canstand/compost.git
-
 [submodule "toys/ucank"]
 	path = toys/ucank
 	url = https://github.com/yinkar/ucank.git
