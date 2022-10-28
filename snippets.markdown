@@ -5,6 +5,7 @@ title: Snippers
 ---
 
 #### mandelbrot-set-on-terminal-high-resolution.go
+![Mandelbrot in Go](/images/misc/mandelbrot.gif)
 <script src="https://gist.github.com/yinkar/2847f399b04c1730acf30b3f84bd9ffb.js"></script>
 
 #### mandelbrot-set-on-terminal.go
