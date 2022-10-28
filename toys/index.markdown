@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Toys
+title: Fidgets
 permalink: /toys/
 ---
 
@@ -15,4 +15,5 @@ permalink: /toys/
 - [Bouncing Ball on JS Console](/toys/bouncing-ball-on-js-console/)
 - [Web Sandbox](/toys/web-sandbox/)
 - [P2P Messenger](/toys/p2p-messenger/)
+- [Yinkar Clocks](/yinkar-clocks/)
 - [Yılgın](/toys/yilgin/)
