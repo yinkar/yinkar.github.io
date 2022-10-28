@@ -351,3 +351,9 @@ table {
 .site-nav {
   font-size: 14px !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .showcase {
+    width: 100%;
+  }
+}
