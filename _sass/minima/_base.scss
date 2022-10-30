@@ -278,7 +278,7 @@ table {
 }
 
 .showcase-item:hover {
-  transform: rotate(3deg);
+  filter: brightness(1.1);
 }
 
 .showcase-item:hover > img {
@@ -287,6 +287,10 @@ table {
 
 .showcase-item:hover::before {
   transform: rotate(-22deg);
+}
+
+.showcase-item:hover::after {
+  box-shadow: inset 0 0 20px #000f;
 }
 
 .showcase-item::before {
@@ -311,6 +315,7 @@ table {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAEAQMAAACTPww9AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TIQtt3gFTAAAAEElEQVR4nGMwYDBgOMBwAAAFSAHhSyiergAAAABJRU5ErkJggg==);
   background-color: #0002;
   box-shadow: inset 0 0 10px #000a;
+  transition: 200ms ease-in-out all;
 }
 
 .showcase-item > img {
@@ -332,6 +337,7 @@ table {
   width: 100%;
   color: #fff;
   text-shadow: 2px 2px 2px #000a, 0 0 5px #000a;
+  z-index: 9999;
 }
 
 .showcase-item > a {
