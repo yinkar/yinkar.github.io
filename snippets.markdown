@@ -12,6 +12,7 @@ title: Snippers
 <script src="https://gist.github.com/yinkar/d80cf83754fa60d3870131ef9df4c120.js"></script>
 
 #### animated-dna.go
+![Animated DNA in Go](/images/misc/animated-dna.gif)
 <script src="https://gist.github.com/yinkar/808748fc55280ee1c5c96aa8fe962946.js"></script>
 
 #### random-step.js
