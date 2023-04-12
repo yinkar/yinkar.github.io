@@ -56,7 +56,7 @@ Yazının devamında ANSI kaçış (escape) karakterleri ve blok karakterlerinde
 
 Ben bu resmi kodladıktan sonra bunun aslında bu kadar uğraş gerektirmemesi gerektiğini düşündüm. Yazılımcı dediğin bir eylemi ikinci defa yapmaz, otomatize eder. Bundan dolayı terminal için çıktı üretecek bir pixel art editörü kodladım. Gerçek anlamda, tam donanımlı bir pixel art editörünü de ilerleyen zamanlarda kodlamayı düşünüyorum.
 
-[ANSI Art Painter](https://yinkar.github.io/toys/ansi-art-painter/)
+[ANSI Art Painter](https://yinkar.github.io/ansi-art-painter/)
 
 ![ANSI Art Painter](/images/blog/ansi-art/ansi-art-7.png)
 

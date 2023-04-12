@@ -4,7 +4,7 @@ title: ANSI Art
 permalink: /ansi-art/
 ---
 
-[ANSI Art Painter](/toys/ansi-art-painter)
+[ANSI Art Painter](/ansi-art-painter)
 
 ### Night Street
 ```bash

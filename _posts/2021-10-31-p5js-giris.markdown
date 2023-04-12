@@ -13,7 +13,7 @@ p5.js, Processing isimli projenin JavaScript'e uyarlanmış bir versiyonudur. Pr
 
 p5.js kullanırken JavaScript yazmaya devam edebilirsiniz. Standart Canvas API yerine p5.js'i kullandığınızda oldukça hızlı işler ortaya çıkarabildiğinizi göreceksiniz. Yalnızca 2 boyutlu değil, 3 boyutlu işler de çıkarmanız mümkün. Benim de birkaç denemem olmuştu, bunlardan birini [bu](/toys/ucank) adres üzerinden görebilirsiniz. Belki onu da detaylıca inceleriz.
 
-Bir oyun kütüphanesi kadar yüklü olmayıp, saf JavaScript kadar da temel işlemler için bize bağlı olmayan bir kütüphane olması oyun prototipleri geliştirebilmemiz için p5.js'i ideal kılıyor. Bu kütüphaneyi kullanarak birçok ıvır zıvır kodladım, [bu](/toys/seken-aksu), [bu](/toys/game-of-life) ve [bu](/toys/ansi-art-painter) birkaç örnek. Yayınlamadığımda onlarca ufak tefek iş var.
+Bir oyun kütüphanesi kadar yüklü olmayıp, saf JavaScript kadar da temel işlemler için bize bağlı olmayan bir kütüphane olması oyun prototipleri geliştirebilmemiz için p5.js'i ideal kılıyor. Bu kütüphaneyi kullanarak birçok ıvır zıvır kodladım, [bu](/toys/seken-aksu), [bu](/toys/game-of-life) ve [bu](/ansi-art-painter) birkaç örnek. Yayınlamadığımda onlarca ufak tefek iş var.
 
 Bu kütüphaneyi CDN üzerinden sayfanıza dahil ederek kullanabilirsiniz: 
 
