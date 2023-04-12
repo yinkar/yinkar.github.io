@@ -1,3 +1,3 @@
 # Yinkar Blog
 
-![Website](https://yinkar.github.io)
+[Website](https://yinkar.github.io)
