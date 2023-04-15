@@ -38,7 +38,11 @@ Aslında bahsettiğim şu operatör karakterlerine bakarak neyin ne için kullan
 
 Brainfuck dilinde girdi ve çıktı sözkonusu olduğunda hücrelerin değerleri birer ASCII karakteri olarak yorumlanıyor. Örneğin üzerinde bulunduğumuz hafıza bloğunun değeri 65 olduğunda, ``.`` karakteriyle ekrana ``A`` çıktısını basıyoruz.
 
-Aslında [Toys](/toys) sayfasında bir ASCII tablosu oluşturmayı düşünüyorum, tercihen markdown kullanarak. Bunun yanında periyodik tablo, elektromanyetik spektrum, akor cetveli gibi farklı disiplinlerdeki farklı referans tablolarını da kodlayarak bu siteye eklemek gibi bir fikrim var. Şimdilik ASCII tablosundaki rakamları ve büyük ve küçük harfleri gösteren bir tablo oluşturayım buraya:
+Aslında [Toys](/toys) sayfasında bir ASCII tablosu oluşturmayı düşünüyorum, tercihen markdown kullanarak. 
+
+Gelecekten mesaj: [Kodladım](/ascii-table)
+
+Bunun yanında periyodik tablo, elektromanyetik spektrum, akor cetveli gibi farklı disiplinlerdeki farklı referans tablolarını da kodlayarak bu siteye eklemek gibi bir fikrim var. Şimdilik ASCII tablosundaki rakamları ve büyük ve küçük harfleri gösteren bir tablo oluşturayım buraya:
 
 
 | #   | Karakter |
@@ -169,6 +173,8 @@ Program başladığında bulunulan ilk hücrenin değerini 5 arttırdık, bir so
 
 Değerleri ASCII tablosunun sınırlarını aşmayacak şekilde istediğiniz gibi arttırabilirsiniz. Bu arada bu kodları denemek için herhangi bir Brainfuck interpreter'ı bulabilirsiniz. Hatta [şuradaki](https://fatiherikli.github.io/brainfuck-visualizer/) gibi bir görselleştiriciyi de kullanabilirsiniz. Ben de bir tane kodlamayı düşünüyorum.
 
+Gelecekten mesaj: [Kodladım](https://yinkar.github.io/cerebrum-penetrate)
+
 Tabii gördüğünüz gibi bunları yazıyoruz, ama elimize bir şey geçmiyor. Şimdi ekrana artık bir şeyler basalım.
 
 En basit şekilde ``A`` harfini şöyle basabileceğiniz aklınıza gelmiştir:
@@ -255,3 +261,5 @@ Buraya kadar öğrendiklerinizle, bir "hello world" uygulaması yazabilmeniz mü
 Input alma konusunda da çok kısa değineyim. Programda ``,`` kullandığınız yerde bir karakter girmeniz beklenir. Bu karakter alındığında karakterin ASCII değeri o an bulunulan hücreye yazılır.
 
 Bu yazı bu kadar yeterli. Zaten yorgun kafayla yazdım, hatalar olabilir. Geleceğe selamlar, ben gidiyorum.
+
+[Brainfuck Yorumlayıcısı](https://yinkar.github.io/cerebrum-penetrate)
