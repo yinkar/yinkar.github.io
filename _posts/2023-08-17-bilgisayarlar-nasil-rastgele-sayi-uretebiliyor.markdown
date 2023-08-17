@@ -4,7 +4,7 @@ title: Kaderi Baştan Yazılmış Olan Bilgisayarlar Nasıl Rastgele Sayı Üret
 date: 2023-08-17 00:18:00 +0300
 author: Hüseyin Karabaş
 description: Bilgisayarlarda rastgele sayı üreten algoritmalara bir giriş 
-featured-image: /images/blog/vscode-indent/vscode-indent-cover.png
+featured-image: /images/blog/rastgelelik/rastgelelik-cover.png
 featured-image-alt: Rastgelelik
 categories: programlama algoritma
 ---
@@ -29,18 +29,20 @@ Bu metotlar yeterince rastgele görünen sayılar üretebilmek için çoğunlukl
 
 Bu aritmetik yöntemlerden son olarak V8 motorunun, dolayısıyla da günümüzde JavaScript çalıştıran çoğu ortamın kullandığı yöntemden; XorShift128+ algoritmasından bahsedelim. Bu algoritmada da verilen seed değeri önce bit düzeyinde 23 kere sola kaydırılıyor ve çıkan değer kendisiyle Xor'lanıyor, ardından bunun sonucu 17 kere sola kaydırılıyor ve kendisiyle Xor'lanıyor, bunun sonucu da ilk adımdaki haliyle Xor'lanıyor derken son olarak da ilk adımdaki değer 26 kere sağa kaydırılıp son değerimizle Xor'lanıyor. E tabii bu kadar işkenceden geçen sayının rastgele görünmemesi pek olası olmazdı. Aynı şekilde işlemler de bitwise yapıldığı için aslında oldukça hızlı bir algoritma. Tabii bunu bu şekilde bir cümlede anlatınca kafada pek bir şey oluşmuyor, o nedenle ben bunun Chrome'un da önemli bir kısmını oluşturan V8 motorunun kaynak kodunda yer alan implementasyonundaki resmini koyayım. 
 
-![V8 kaynak kodundaki XorShift128+ implementasyonu](xorshift128.jpg)
+![V8 kaynak kodundaki XorShift128+ implementasyonu](/images/blog/rastgelelik/rastgelelik-1.png)
 
 Şimdi daha farklı yöntemleri inceleyelim. Unix benzeri işletim sistemlerinde, dolayısıyla GNU/Linux dağıtımlarında da yer alan sözde cihazlar vardır. İşletim sisteminin kök (``/``) dizininde yer alan ``/dev`` dizini altında sisteme normal şartlar altında sisteme fiziksel olarak bağlı cihazların temsili halleri birer dosya formatında bulunurken bahsettiğim sözde cihazlar da onlarla beraber bu dizinde bulunur. Bunlar /dev/random, /dev/zero, /dev/urandom, /dev/full, /dev/null gibi özel dosyalardır. Bizim odaklanacağımız sözde cihaz ise /dev/random olacak. 
 
 /dev/random cihazından veri okuyacak olursanız size bir akış olarak sürekli bir şekilde rastgele byte'lar üretecektir. Örneğin ``cat /dev/random`` gibi bir komutla bunları ham olarak okuduğunuzda işletim sistemi karakter tablosundaki birer karakterle eşleştirmeye çalışacağından anlamsız karakterler olarak gözlemleyeceksiniz. 
 
-![]()
+![/dev/random çıktısı](/images/blog/rastgelelik/rastgelelik-2.png)
 
 Gelelim esas önemli kısma. ``/dev/random`` cihazının bizim için önemi şu: kendisi bu rastgele değerleri donanımlardaki çevresel gürültülerden elde ediyor. Aslına bakarsanız aritmetiksel yöntemlerden daha kullanışlı. Tabii kendi cihazınızın oluşturacağı elektromanyetik gürültüler hiçbir zaman tam olarak tahmin edilemez değildir. Bu nedenle ``/dev/random`` veya onun entropik olarak daha geniş bir havuza sahip olan kuzeni ``/dev/urandom`` "gerçek" rastgele sayı üreteci (True random number generator) kabul edilmiyor. Onlar da birer sözde rastgele sayı üreteci olarak geçmekte.
 
 TRNG olarak anılan bazı çevresel donanımlar mevcut. Bunlar da çevresel bazı değerleri alıp işleyerek bunu yapıyor. Örneğin termal gürültü, fotoelektrik etki, ışın ayırıcı (beam splitter) etkisi veya diğer kuantumsal etkiler gibi, standart bir bilgisayar donanımında bulunmayan sensörlerle yapılan gözlemlerin sonucu ile amacına ulaşıyor. Bunlara hardware random number generator (HRNG) veya non-deterministic (deterministik olmayan) random bit generator (NRBG) de deniyor.
 
+![Gerçek rastgele sayı üreteci donanımı](/images/blog/rastgelelik/rastgelelik-3.jpg)
+
 random.org gibi siteler ise atmosferdeki elektromanyetik gürültüyü kullanarak anlık olarak gerçek rastgele sayı üretme ve size bunu sayfa üzerinden ulaştırma vaadinde bulunuyor. 
 
-Son olarak kriptografik olarak güvenli olma konusuna gelelim. Gördüğünüz üzere sözde rastlantısal sayılar tahmin edilemez değil, sayıyı oluşturmadan önce onu tahmin edebilmek olası. Bu ise kullanımda büyük güvenlik açıkları doğuruyor. Örneğin yalnızca adresi bilen kişilerin ulaşabileceği bir sayfa veya dosya ismi belirlediniz ve bunu bir PRNG ile yaptınız. İşi bilen bir insan rastgele olduğunu düşündüğünüz o sonuca ulaşıp erişilmesini istemediğiniz o noktaya erişebilecektir. Senaryolar bundan ibaret de değil elbet, rastgelelik tahmin edilebilir olduğu zaman rastgelelik olmaktan çıkıyor. Bu gibi durumlar için ``cryptographically secure random number generator`` (kriptografik olarak güvenli rastgele sayı üreteci) adı verilen üreteçler kullanılır. /dev/random ve /dev/urandom sözde cihazları da kriptografik olarak güvenli olarak geçer. /dev/random, bir makine özelinde yaklaşık olarak tahmin edilebilir sonuçlar doğurabilir olsa da geniş bir perspektifte güvenli sayılabilir. Şayet özellikle kripto para, blockchain gibi güvenlik gerektiren bir platform kodluyorsanız bakmanız gereken rastgele sayı algoritmaları kriptografik olarak güvenli olanlar olmalıdır. Bunun için araştırma yapmalı ve uygun kütüphaneleri bulmalısınız. Geleceğe selamlar, ben gidiyorum.
+Son olarak kriptografik olarak güvenli olma konusuna gelelim. Gördüğünüz üzere sözde rastlantısal sayılar tahmin edilemez değil, sayıyı oluşturmadan önce onu tahmin edebilmek olası. Bu ise kullanımda büyük güvenlik açıkları doğuruyor. Örneğin yalnızca adresi bilen kişilerin ulaşabileceği bir sayfa veya dosya ismi belirlediniz ve bunu bir PRNG ile yaptınız. İşi bilen bir insan rastgele olduğunu düşündüğünüz o sonuca ulaşıp erişilmesini istemediğiniz o noktaya erişebilecektir. Senaryolar bundan ibaret de değil elbet, rastgelelik tahmin edilebilir olduğu zaman rastgelelik olmaktan çıkıyor. Bu gibi durumlar için ``cryptographically secure random number generator`` (kriptografik olarak güvenli rastgele sayı üreteci) adı verilen üreteçler kullanılır. /dev/random ve /dev/urandom sözde cihazları da kriptografik olarak güvenli olarak geçer. /dev/random, bir makine özelinde yaklaşık olarak tahmin edilebilir sonuçlar doğurabilir olsa da geniş bir perspektifte güvenli sayılabilir. Şayet özellikle kripto para, blockchain gibi güvenlik gerektiren bir platform kodluyorsanız bakmanız gereken rastgele sayı algoritmaları kriptografik olarak güvenli olanlar olmalıdır. Bunun için araştırma yapmalı ve uygun kütüphaneleri bulmalısınız. Geleceğe selamlar.
