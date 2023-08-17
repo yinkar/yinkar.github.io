@@ -4,7 +4,7 @@ title: Kaderi Baştan Yazılmış Olan Bilgisayarlar Nasıl Rastgele Sayı Üret
 date: 2023-08-17 00:18:00 +0300
 author: Hüseyin Karabaş
 description: Bilgisayarlarda rastgele sayı üreten algoritmalara bir giriş 
-featured-image: /images/blog/rastgelelik/rastgelelik-cover.png
+featured-image: /images/blog/rastgelelik/rastgelelik-cover.jpg
 featured-image-alt: Rastgelelik
 categories: programlama algoritma
 ---
