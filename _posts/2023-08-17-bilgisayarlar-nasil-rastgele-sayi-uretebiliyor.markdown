@@ -9,7 +9,7 @@ featured-image-alt: Rastgelelik
 categories: programlama algoritma
 ---
 
-Rastgele sayıları kullanmadığımız yer var mı? Çekilişler, oyunlar, dosya isimleri, simülasyonlar, parola oluşturucular, istatistik, sanat... Bu liste uzar gider. Yalnızca sayılar değil, rastgele sayılardan türetilmiş farklı veri türleri de bu işlerin bir kısmında kullanılabilir. Yalnız şöyle bir durum var. Tüm bunları bilgisayar üzerinde yapabiliyoruz, ancak bilgisayarın kendisi yapısı gereği gerçek anlamda rastgele sayı üretemez.
+Rastgele sayıları kullanmadığımız yer var mı? Çekilişler, oyunlar, dosya isimleri, simülasyonlar, parola oluşturucular, istatistik, sanat... Bu liste uzar gider. Yalnızca sayılar değil, rastgele sayılardan türetilmiş farklı veri türleri de bu işlerin bir kısmında kullanılabilir. Yalnız şöyle bir durum var; tüm bunları bilgisayar üzerinde yapabiliyoruz, ancak bilgisayarın kendisi yapısı gereği gerçek anlamda rastgele sayı üretememekte.
 
 Bilgisayar açıldığı andan itibaren dışarıdan bir veri alana kadar gerçekleşecek her şey bellidir. Dışarıdan bir veri geldiğinde, örneğin bir mouse hareketi gerçekleştiğinde bunu da kullanıcı kendi bilinci dahilinde gerçekleştirdiği için rastgele olarak görmeyiz. Tabii böyle bir girdiyi sayısal olarak yorumlayarak anlık olarak rastgele bir değer olarak yorumlamak da bir fikir. Bunu yapan uygulamalar da yok değil, Windows üzerinden dışarıya SSH bağlantısı kurmayı sağlayan PuTTY buna bir örnek.
 
