@@ -31,7 +31,7 @@ Bu aritmetik yöntemlerden son olarak V8 motorunun, dolayısıyla da günümüzd
 
 ![V8 kaynak kodundaki XorShift128+ implementasyonu](/images/blog/rastgelelik/rastgelelik-1.png)
 
-Şimdi daha farklı yöntemleri inceleyelim. Unix benzeri işletim sistemlerinde, dolayısıyla GNU/Linux dağıtımlarında da yer alan sözde cihazlar vardır. İşletim sisteminin kök (``/``) dizininde yer alan ``/dev`` dizini altında sisteme normal şartlar altında sisteme fiziksel olarak bağlı cihazların temsili halleri birer dosya formatında bulunurken bahsettiğim sözde cihazlar da onlarla beraber bu dizinde bulunur. Bunlar /dev/random, /dev/zero, /dev/urandom, /dev/full, /dev/null gibi özel dosyalardır. Bizim odaklanacağımız sözde cihaz ise /dev/random olacak. 
+Şimdi daha farklı yöntemleri inceleyelim. Unix benzeri işletim sistemlerinde, dolayısıyla GNU/Linux dağıtımlarında da yer alan sözde cihazlar vardır. İşletim sisteminin kök (``/``) dizininde yer alan ``/dev`` dizini altında sisteme normal şartlar altında fiziksel olarak bağlı cihazların temsili halleri birer dosya formatında bulunurken bahsettiğim sözde cihazlar da onlarla beraber bu dizinde bulunur. Bunlar /dev/random, /dev/zero, /dev/urandom, /dev/full, /dev/null gibi özel dosyalardır. Bizim odaklanacağımız sözde cihaz ise /dev/random olacak. 
 
 /dev/random cihazından veri okuyacak olursanız size bir akış olarak sürekli bir şekilde rastgele byte'lar üretecektir. Örneğin ``cat /dev/random`` gibi bir komutla bunları ham olarak okuduğunuzda işletim sistemi karakter tablosundaki birer karakterle eşleştirmeye çalışacağından anlamsız karakterler olarak gözlemleyeceksiniz. 
 
